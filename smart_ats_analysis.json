@@ -1,0 +1,798 @@
+{
+  "job_description_file": "AI Engineer - Job Description.pdf",
+  "processing_timestamp": "2025-08-21T00:19:20.434661",
+  "total_candidates": 7,
+  "processing_errors": [],
+  "job_requirements_extracted": {
+    "technical_skills": {
+      "matched": [
+        "pytorch",
+        "openai api",
+        "huggingface transformers",
+        "models (llms",
+        "langchain",
+        "scikit-learn",
+        "such as javascript"
+      ],
+      "missing": [
+        "langgraph",
+        "weaviate",
+        "time series",
+        "other forecasting techniques",
+        "similar vectordbs for document retrieval",
+        "generative ai applications",
+        "ml frameworks like tensorflow",
+        "to build cutting-edge ai applications",
+        "storage",
+        "arima",
+        "other generative ai tools",
+        "lstm",
+        "faiss",
+        "like tensorflow",
+        "ml models",
+        "deploying ai",
+        "to enhance performance",
+        "generative ai",
+        "accuracy",
+        "pinecone",
+        "focusing on nlp",
+        "prophet",
+        "implementing rag workflows",
+        "developing",
+        "with langgraph",
+        "fine-tuning",
+        "techniques",
+        "sql",
+        ": 1"
+      ],
+      "match_details": {
+        "pytorch": {
+          "type": "exact",
+          "matched_with": "PyTorch"
+        },
+        "openai api": {
+          "type": "partial",
+          "matched_with": "NLP (OpenAI API"
+        },
+        "huggingface transformers": {
+          "type": "partial",
+          "matched_with": "Transformers"
+        },
+        "models (llms": {
+          "type": "partial",
+          "matched_with": "LLMs"
+        },
+        "langchain": {
+          "type": "exact",
+          "matched_with": "LangChain"
+        },
+        "scikit-learn": {
+          "type": "exact",
+          "matched_with": "scikit-learn"
+        },
+        "such as javascript": {
+          "type": "semantic",
+          "matched_with": "Javascript(Novice) •Frameworks: TensorFlow",
+          "similarity": 0.359475323926137
+        }
+      }
+    },
+    "experience_analysis": {
+      "type_match_score": 40.0,
+      "required_years": 4,
+      "resume_years": 0,
+      "experience_entries": 1
+    },
+    "education_analysis": {
+      "message": "No specific education requirements"
+    },
+    "additional_factors": {
+      "projects_score": 60
+    }
+  },
+  "candidates": [
+    {
+      "candidate_name": "Academic_CV_Template",
+      "file_name": "Academic_CV_Template.pdf",
+      "overall_score": 35.3,
+      "score_breakdown": {
+        "technical_skills": 19.4,
+        "experience": 40.0,
+        "education": 50,
+        "additional_factors": 60
+      },
+      "detailed_analysis": {
+        "technical_skills": {
+          "matched": [
+            "pytorch",
+            "openai api",
+            "huggingface transformers",
+            "models (llms",
+            "langchain",
+            "scikit-learn",
+            "such as javascript"
+          ],
+          "missing": [
+            "langgraph",
+            "weaviate",
+            "time series",
+            "other forecasting techniques",
+            "similar vectordbs for document retrieval",
+            "generative ai applications",
+            "ml frameworks like tensorflow",
+            "to build cutting-edge ai applications",
+            "storage",
+            "arima",
+            "other generative ai tools",
+            "lstm",
+            "faiss",
+            "like tensorflow",
+            "ml models",
+            "deploying ai",
+            "to enhance performance",
+            "generative ai",
+            "accuracy",
+            "pinecone",
+            "focusing on nlp",
+            "prophet",
+            "implementing rag workflows",
+            "developing",
+            "with langgraph",
+            "fine-tuning",
+            "techniques",
+            "sql",
+            ": 1"
+          ],
+          "match_details": {
+            "pytorch": {
+              "type": "exact",
+              "matched_with": "PyTorch"
+            },
+            "openai api": {
+              "type": "partial",
+              "matched_with": "NLP (OpenAI API"
+            },
+            "huggingface transformers": {
+              "type": "partial",
+              "matched_with": "Transformers"
+            },
+            "models (llms": {
+              "type": "partial",
+              "matched_with": "LLMs"
+            },
+            "langchain": {
+              "type": "exact",
+              "matched_with": "LangChain"
+            },
+            "scikit-learn": {
+              "type": "exact",
+              "matched_with": "scikit-learn"
+            },
+            "such as javascript": {
+              "type": "semantic",
+              "matched_with": "Javascript(Novice) •Frameworks: TensorFlow",
+              "similarity": 0.359475323926137
+            }
+          }
+        },
+        "experience_analysis": {
+          "type_match_score": 40.0,
+          "required_years": 4,
+          "resume_years": 0,
+          "experience_entries": 1
+        },
+        "education_analysis": {
+          "message": "No specific education requirements"
+        },
+        "additional_factors": {
+          "projects_score": 60
+        }
+      },
+      "strengths": [
+        "Strong project portfolio demonstrates practical skills"
+      ],
+      "recommendations": [
+        "Add key technical skills: langgraph, weaviate, time series, other forecasting techniques, similar vectordbs for document retrieval",
+        "Incorporate more job-relevant keywords throughout resume",
+        "Quantify achievements and impact in previous roles/projects"
+      ],
+      "extracted_info": {
+        "skills_found": 22,
+        "experience_years": 0,
+        "education_count": 1,
+        "projects_count": 9,
+        "certifications_count": 0
+      },
+      "rank": 1
+    },
+    {
+      "candidate_name": "java_resume",
+      "file_name": "java_resume.pdf",
+      "overall_score": 32.2,
+      "score_breakdown": {
+        "technical_skills": 5.6,
+        "experience": 40.0,
+        "education": 50,
+        "additional_factors": 60
+      },
+      "detailed_analysis": {
+        "technical_skills": {
+          "matched": [
+            "such as javascript",
+            "sql"
+          ],
+          "missing": [
+            "langgraph",
+            "weaviate",
+            "time series",
+            "other forecasting techniques",
+            "similar vectordbs for document retrieval",
+            "generative ai applications",
+            "ml frameworks like tensorflow",
+            "to build cutting-edge ai applications",
+            "storage",
+            "arima",
+            "other generative ai tools",
+            "pytorch",
+            "openai api",
+            "lstm",
+            "faiss",
+            "like tensorflow",
+            "ml models",
+            "huggingface transformers",
+            "deploying ai",
+            "to enhance performance",
+            "generative ai",
+            "accuracy",
+            "models (llms",
+            "pinecone",
+            "langchain",
+            "focusing on nlp",
+            "prophet",
+            "implementing rag workflows",
+            "developing",
+            "with langgraph",
+            "fine-tuning",
+            "techniques",
+            ": 1",
+            "scikit-learn"
+          ],
+          "match_details": {
+            "such as javascript": {
+              "type": "partial",
+              "matched_with": "Java"
+            },
+            "sql": {
+              "type": "exact",
+              "matched_with": "SQL"
+            }
+          }
+        },
+        "experience_analysis": {
+          "type_match_score": 40.0,
+          "required_years": 4,
+          "resume_years": 0,
+          "experience_entries": 1
+        },
+        "education_analysis": {
+          "message": "No specific education requirements"
+        },
+        "additional_factors": {
+          "projects_score": 60,
+          "work_authorization": {
+            "opt": true,
+            "cpt": false,
+            "h1b": false,
+            "citizen": false,
+            "green_card": false,
+            "authorized": false
+          }
+        }
+      },
+      "strengths": [
+        "Strong project portfolio demonstrates practical skills"
+      ],
+      "recommendations": [
+        "Add key technical skills: langgraph, weaviate, time series, other forecasting techniques, similar vectordbs for document retrieval",
+        "Incorporate more job-relevant keywords throughout resume",
+        "Quantify achievements and impact in previous roles/projects"
+      ],
+      "extracted_info": {
+        "skills_found": 14,
+        "experience_years": 0,
+        "education_count": 1,
+        "projects_count": 4,
+        "certifications_count": 0
+      },
+      "rank": 2
+    },
+    {
+      "candidate_name": "FAANGPath_Simple_Template",
+      "file_name": "FAANGPath_Simple_Template.pdf",
+      "overall_score": 31.2,
+      "score_breakdown": {
+        "technical_skills": 2.8,
+        "experience": 40.0,
+        "education": 50,
+        "additional_factors": 60
+      },
+      "detailed_analysis": {
+        "technical_skills": {
+          "matched": [
+            "such as javascript"
+          ],
+          "missing": [
+            "langgraph",
+            "weaviate",
+            "time series",
+            "other forecasting techniques",
+            "similar vectordbs for document retrieval",
+            "generative ai applications",
+            "ml frameworks like tensorflow",
+            "to build cutting-edge ai applications",
+            "storage",
+            "arima",
+            "other generative ai tools",
+            "pytorch",
+            "openai api",
+            "lstm",
+            "faiss",
+            "like tensorflow",
+            "ml models",
+            "huggingface transformers",
+            "deploying ai",
+            "to enhance performance",
+            "generative ai",
+            "accuracy",
+            "models (llms",
+            "pinecone",
+            "langchain",
+            "focusing on nlp",
+            "prophet",
+            "implementing rag workflows",
+            "developing",
+            "with langgraph",
+            "fine-tuning",
+            "techniques",
+            "sql",
+            ": 1",
+            "scikit-learn"
+          ],
+          "match_details": {
+            "such as javascript": {
+              "type": "partial",
+              "matched_with": "Java"
+            }
+          }
+        },
+        "experience_analysis": {
+          "type_match_score": 40.0,
+          "required_years": 4,
+          "resume_years": 0,
+          "experience_entries": 1
+        },
+        "education_analysis": {
+          "message": "No specific education requirements"
+        },
+        "additional_factors": {
+          "projects_score": 60,
+          "work_authorization": {
+            "opt": true,
+            "cpt": false,
+            "h1b": false,
+            "citizen": false,
+            "green_card": false,
+            "authorized": false
+          }
+        }
+      },
+      "strengths": [
+        "Strong project portfolio demonstrates practical skills"
+      ],
+      "recommendations": [
+        "Add key technical skills: langgraph, weaviate, time series, other forecasting techniques, similar vectordbs for document retrieval",
+        "Incorporate more job-relevant keywords throughout resume",
+        "Quantify achievements and impact in previous roles/projects"
+      ],
+      "extracted_info": {
+        "skills_found": 9,
+        "experience_years": 0,
+        "education_count": 1,
+        "projects_count": 5,
+        "certifications_count": 0
+      },
+      "rank": 3
+    },
+    {
+      "candidate_name": "fullstack",
+      "file_name": "fullstack.pdf",
+      "overall_score": 31.2,
+      "score_breakdown": {
+        "technical_skills": 2.8,
+        "experience": 40.0,
+        "education": 50,
+        "additional_factors": 60
+      },
+      "detailed_analysis": {
+        "technical_skills": {
+          "matched": [
+            "such as javascript"
+          ],
+          "missing": [
+            "langgraph",
+            "weaviate",
+            "time series",
+            "other forecasting techniques",
+            "similar vectordbs for document retrieval",
+            "generative ai applications",
+            "ml frameworks like tensorflow",
+            "to build cutting-edge ai applications",
+            "storage",
+            "arima",
+            "other generative ai tools",
+            "pytorch",
+            "openai api",
+            "lstm",
+            "faiss",
+            "like tensorflow",
+            "ml models",
+            "huggingface transformers",
+            "deploying ai",
+            "to enhance performance",
+            "generative ai",
+            "accuracy",
+            "models (llms",
+            "pinecone",
+            "langchain",
+            "focusing on nlp",
+            "prophet",
+            "implementing rag workflows",
+            "developing",
+            "with langgraph",
+            "fine-tuning",
+            "techniques",
+            "sql",
+            ": 1",
+            "scikit-learn"
+          ],
+          "match_details": {
+            "such as javascript": {
+              "type": "semantic",
+              "matched_with": "•Programming Languages: JavaScript (TypeScript",
+              "similarity": 0.3441641470415076
+            }
+          }
+        },
+        "experience_analysis": {
+          "type_match_score": 40.0,
+          "required_years": 4,
+          "resume_years": 0,
+          "experience_entries": 1
+        },
+        "education_analysis": {
+          "message": "No specific education requirements"
+        },
+        "additional_factors": {
+          "projects_score": 60,
+          "work_authorization": {
+            "opt": true,
+            "cpt": false,
+            "h1b": false,
+            "citizen": false,
+            "green_card": false,
+            "authorized": false
+          }
+        }
+      },
+      "strengths": [
+        "Strong project portfolio demonstrates practical skills"
+      ],
+      "recommendations": [
+        "Add key technical skills: langgraph, weaviate, time series, other forecasting techniques, similar vectordbs for document retrieval",
+        "Incorporate more job-relevant keywords throughout resume",
+        "Quantify achievements and impact in previous roles/projects"
+      ],
+      "extracted_info": {
+        "skills_found": 2,
+        "experience_years": 0,
+        "education_count": 1,
+        "projects_count": 6,
+        "certifications_count": 0
+      },
+      "rank": 4
+    },
+    {
+      "candidate_name": "Analyst_resume",
+      "file_name": "Analyst_resume.pdf",
+      "overall_score": 30.2,
+      "score_breakdown": {
+        "technical_skills": 0.0,
+        "experience": 40.0,
+        "education": 50,
+        "additional_factors": 60
+      },
+      "detailed_analysis": {
+        "technical_skills": {
+          "matched": [],
+          "missing": [
+            "langgraph",
+            "weaviate",
+            "time series",
+            "other forecasting techniques",
+            "similar vectordbs for document retrieval",
+            "generative ai applications",
+            "ml frameworks like tensorflow",
+            "to build cutting-edge ai applications",
+            "storage",
+            "arima",
+            "other generative ai tools",
+            "pytorch",
+            "openai api",
+            "lstm",
+            "such as javascript",
+            "faiss",
+            "like tensorflow",
+            "ml models",
+            "huggingface transformers",
+            "deploying ai",
+            "to enhance performance",
+            "generative ai",
+            "accuracy",
+            "models (llms",
+            "pinecone",
+            "langchain",
+            "focusing on nlp",
+            "prophet",
+            "implementing rag workflows",
+            "developing",
+            "with langgraph",
+            "fine-tuning",
+            "techniques",
+            "sql",
+            ": 1",
+            "scikit-learn"
+          ],
+          "match_details": {}
+        },
+        "experience_analysis": {
+          "type_match_score": 40.0,
+          "required_years": 4,
+          "resume_years": 0,
+          "experience_entries": 1
+        },
+        "education_analysis": {
+          "message": "No specific education requirements"
+        },
+        "additional_factors": {
+          "projects_score": 60,
+          "work_authorization": {
+            "opt": true,
+            "cpt": false,
+            "h1b": false,
+            "citizen": false,
+            "green_card": false,
+            "authorized": false
+          }
+        }
+      },
+      "strengths": [
+        "Strong project portfolio demonstrates practical skills"
+      ],
+      "recommendations": [
+        "Add key technical skills: langgraph, weaviate, time series, other forecasting techniques, similar vectordbs for document retrieval",
+        "Incorporate more job-relevant keywords throughout resume",
+        "Quantify achievements and impact in previous roles/projects"
+      ],
+      "extracted_info": {
+        "skills_found": 1,
+        "experience_years": 0,
+        "education_count": 0,
+        "projects_count": 10,
+        "certifications_count": 0
+      },
+      "rank": 5
+    },
+    {
+      "candidate_name": "lateset_shine_res",
+      "file_name": "lateset_shine_res.pdf",
+      "overall_score": 29.4,
+      "score_breakdown": {
+        "technical_skills": 2.8,
+        "experience": 40.0,
+        "education": 50,
+        "additional_factors": 60
+      },
+      "detailed_analysis": {
+        "technical_skills": {
+          "matched": [
+            "such as javascript"
+          ],
+          "missing": [
+            "langgraph",
+            "weaviate",
+            "time series",
+            "other forecasting techniques",
+            "similar vectordbs for document retrieval",
+            "generative ai applications",
+            "ml frameworks like tensorflow",
+            "to build cutting-edge ai applications",
+            "storage",
+            "arima",
+            "other generative ai tools",
+            "pytorch",
+            "openai api",
+            "lstm",
+            "faiss",
+            "like tensorflow",
+            "ml models",
+            "huggingface transformers",
+            "deploying ai",
+            "to enhance performance",
+            "generative ai",
+            "accuracy",
+            "models (llms",
+            "pinecone",
+            "langchain",
+            "focusing on nlp",
+            "prophet",
+            "implementing rag workflows",
+            "developing",
+            "with langgraph",
+            "fine-tuning",
+            "techniques",
+            "sql",
+            ": 1",
+            "scikit-learn"
+          ],
+          "match_details": {
+            "such as javascript": {
+              "type": "semantic",
+              "matched_with": "Javascript(Novice) •Frameworks: React",
+              "similarity": 0.35005596312872084
+            }
+          }
+        },
+        "experience_analysis": {
+          "type_match_score": 40.0,
+          "required_years": 4,
+          "resume_years": 0,
+          "experience_entries": 1
+        },
+        "education_analysis": {
+          "message": "No specific education requirements"
+        },
+        "additional_factors": {
+          "projects_score": 60
+        }
+      },
+      "strengths": [
+        "Strong project portfolio demonstrates practical skills"
+      ],
+      "recommendations": [
+        "Add key technical skills: langgraph, weaviate, time series, other forecasting techniques, similar vectordbs for document retrieval",
+        "Incorporate more job-relevant keywords throughout resume",
+        "Quantify achievements and impact in previous roles/projects"
+      ],
+      "extracted_info": {
+        "skills_found": 7,
+        "experience_years": 0,
+        "education_count": 1,
+        "projects_count": 12,
+        "certifications_count": 0
+      },
+      "rank": 6
+    },
+    {
+      "candidate_name": "OldResume",
+      "file_name": "OldResume.pdf",
+      "overall_score": 20.2,
+      "score_breakdown": {
+        "technical_skills": 5.6,
+        "experience": 0.0,
+        "education": 50,
+        "additional_factors": 60
+      },
+      "detailed_analysis": {
+        "technical_skills": {
+          "matched": [
+            "pytorch",
+            "scikit-learn"
+          ],
+          "missing": [
+            "langgraph",
+            "weaviate",
+            "time series",
+            "other forecasting techniques",
+            "similar vectordbs for document retrieval",
+            "generative ai applications",
+            "ml frameworks like tensorflow",
+            "to build cutting-edge ai applications",
+            "storage",
+            "arima",
+            "other generative ai tools",
+            "openai api",
+            "lstm",
+            "such as javascript",
+            "faiss",
+            "like tensorflow",
+            "ml models",
+            "huggingface transformers",
+            "deploying ai",
+            "to enhance performance",
+            "generative ai",
+            "accuracy",
+            "models (llms",
+            "pinecone",
+            "langchain",
+            "focusing on nlp",
+            "prophet",
+            "implementing rag workflows",
+            "developing",
+            "with langgraph",
+            "fine-tuning",
+            "techniques",
+            "sql",
+            ": 1"
+          ],
+          "match_details": {
+            "pytorch": {
+              "type": "exact",
+              "matched_with": "PyTorch"
+            },
+            "scikit-learn": {
+              "type": "exact",
+              "matched_with": "scikit-learn"
+            }
+          }
+        },
+        "experience_analysis": {
+          "type_match_score": 0.0,
+          "required_years": 4,
+          "resume_years": 0,
+          "experience_entries": 1
+        },
+        "education_analysis": {
+          "message": "No specific education requirements"
+        },
+        "additional_factors": {
+          "projects_score": 60,
+          "work_authorization": {
+            "opt": true,
+            "cpt": false,
+            "h1b": false,
+            "citizen": false,
+            "green_card": false,
+            "authorized": false
+          }
+        }
+      },
+      "strengths": [
+        "Strong project portfolio demonstrates practical skills"
+      ],
+      "recommendations": [
+        "Add key technical skills: langgraph, weaviate, time series, other forecasting techniques, similar vectordbs for document retrieval",
+        "Highlight relevant work experience, internships, or projects more prominently",
+        "Incorporate more job-relevant keywords throughout resume",
+        "Quantify achievements and impact in previous roles/projects"
+      ],
+      "extracted_info": {
+        "skills_found": 21,
+        "experience_years": 0,
+        "education_count": 1,
+        "projects_count": 17,
+        "certifications_count": 0
+      },
+      "rank": 7
+    }
+  ],
+  "statistics": {
+    "score_distribution": {
+      "excellent_80_plus": 0,
+      "good_60_to_79": 0,
+      "fair_40_to_59": 0,
+      "poor_below_40": 7
+    },
+    "average_score": 30.0,
+    "median_score": 31.2
+  }
+}

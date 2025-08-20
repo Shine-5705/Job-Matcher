@@ -1,0 +1,1681 @@
+{
+  "job_description_file": "AI Engineer - Job Description.pdf",
+  "processing_timestamp": "2025-08-21T01:46:46.506813",
+  "total_candidates": 7,
+  "processing_errors": [],
+  "job_requirements_extracted": {
+    "technical_skills": {
+      "matched": [
+        "such as javascript"
+      ],
+      "missing": [
+        "other generative ai tools",
+        "storage",
+        "prophet",
+        "deploying ai",
+        "developing",
+        "to build cutting-edge ai applications",
+        "implementing rag workflows",
+        "time series",
+        "langchain",
+        "pinecone",
+        "like tensorflow",
+        "openai api",
+        "ml frameworks like tensorflow",
+        "arima",
+        "pytorch",
+        "faiss",
+        "sql",
+        "accuracy",
+        "models (llms",
+        "huggingface transformers",
+        ": 1",
+        "techniques",
+        "weaviate",
+        "to enhance performance",
+        "scikit-learn",
+        "focusing on nlp",
+        "generative ai applications",
+        "lstm",
+        "similar vectordbs for document retrieval",
+        "ml models",
+        "other forecasting techniques",
+        "langgraph",
+        "with langgraph",
+        "fine-tuning",
+        "generative ai"
+      ],
+      "match_details": {
+        "such as javascript": {
+          "type": "semantic",
+          "matched_with": "Javascript(Novice) •Frameworks: React",
+          "similarity": 0.35005596312872084
+        }
+      }
+    },
+    "market_analysis": {
+      "overall_market_score": 17.7,
+      "category_scores": {
+        "ai_ml": {
+          "score": 42.1,
+          "found_skills": [
+            "claude",
+            "llm",
+            "transformer",
+            "langchain",
+            "rag",
+            "fine-tuning",
+            "prompt engineering",
+            "openai"
+          ],
+          "total_possible": 19
+        },
+        "cloud_devops": {
+          "score": 15.4,
+          "found_skills": [
+            "kubernetes",
+            "docker"
+          ],
+          "total_possible": 13
+        },
+        "data_engineering": {
+          "score": 9.1,
+          "found_skills": [
+            "postgres"
+          ],
+          "total_possible": 11
+        },
+        "modern_frontend": {
+          "score": 9.1,
+          "found_skills": [
+            "react"
+          ],
+          "total_possible": 11
+        },
+        "backend_modern": {
+          "score": 20.0,
+          "found_skills": [
+            "fastapi",
+            "flask"
+          ],
+          "total_possible": 10
+        },
+        "security": {
+          "score": 0.0,
+          "found_skills": [],
+          "total_possible": 8
+        },
+        "blockchain_web3": {
+          "score": 0.0,
+          "found_skills": [],
+          "total_possible": 7
+        }
+      },
+      "total_trending_skills_found": 14
+    },
+    "leadership_analysis": {
+      "leadership_score": 60.0,
+      "achievement_score": 0,
+      "leadership_indicators": [
+        "managed",
+        "coordinated",
+        "spearheaded"
+      ],
+      "quantified_achievements": [],
+      "leadership_count": 3,
+      "achievement_count": 0
+    },
+    "quality_analysis": {
+      "overall_quality_score": 71.9,
+      "readability_score": 55.0,
+      "action_verb_score": 70.0,
+      "technical_depth_score": 62.5,
+      "length_score": 100,
+      "word_count": 512,
+      "sentence_count": 17,
+      "flesch_reading_ease": 20.0,
+      "grade_level": 16.2,
+      "action_verbs_found": 7,
+      "tech_depth_indicators": 5
+    },
+    "certification_analysis": {
+      "certification_score": 25,
+      "valuable_certifications": [
+        "machine learning engineer"
+      ],
+      "certification_count": 1
+    },
+    "differentiation_analysis": {
+      "differentiation_score": 100,
+      "unique_elements": [
+        "metrics",
+        "scoring",
+        "peace",
+        "currency-specific",
+        "protocol",
+        "cutting",
+        "learnign",
+        "◦won",
+        "◦managed",
+        "•data"
+      ],
+      "specialized_terms": [
+        "claude",
+        "fine-tuning"
+      ],
+      "uniqueness_ratio": 10.5
+    },
+    "experience_analysis": {
+      "type_match_score": 40.0,
+      "required_years": 4,
+      "resume_years": 0,
+      "experience_entries": 1
+    },
+    "education_analysis": {
+      "message": "No specific education requirements"
+    }
+  },
+  "candidates": [
+    {
+      "candidate_name": "lateset_shine_res",
+      "file_name": "lateset_shine_res.pdf",
+      "overall_score": 44.1,
+      "score_breakdown": {
+        "core_skills": 27.6,
+        "market_relevance": 17.7,
+        "leadership_impact": 36.0,
+        "resume_quality": 71.9,
+        "certifications": 25,
+        "differentiation": 100
+      },
+      "detailed_analysis": {
+        "technical_skills": {
+          "matched": [
+            "such as javascript"
+          ],
+          "missing": [
+            "other generative ai tools",
+            "storage",
+            "prophet",
+            "deploying ai",
+            "developing",
+            "to build cutting-edge ai applications",
+            "implementing rag workflows",
+            "time series",
+            "langchain",
+            "pinecone",
+            "like tensorflow",
+            "openai api",
+            "ml frameworks like tensorflow",
+            "arima",
+            "pytorch",
+            "faiss",
+            "sql",
+            "accuracy",
+            "models (llms",
+            "huggingface transformers",
+            ": 1",
+            "techniques",
+            "weaviate",
+            "to enhance performance",
+            "scikit-learn",
+            "focusing on nlp",
+            "generative ai applications",
+            "lstm",
+            "similar vectordbs for document retrieval",
+            "ml models",
+            "other forecasting techniques",
+            "langgraph",
+            "with langgraph",
+            "fine-tuning",
+            "generative ai"
+          ],
+          "match_details": {
+            "such as javascript": {
+              "type": "semantic",
+              "matched_with": "Javascript(Novice) •Frameworks: React",
+              "similarity": 0.35005596312872084
+            }
+          }
+        },
+        "market_analysis": {
+          "overall_market_score": 17.7,
+          "category_scores": {
+            "ai_ml": {
+              "score": 42.1,
+              "found_skills": [
+                "claude",
+                "llm",
+                "transformer",
+                "langchain",
+                "rag",
+                "fine-tuning",
+                "prompt engineering",
+                "openai"
+              ],
+              "total_possible": 19
+            },
+            "cloud_devops": {
+              "score": 15.4,
+              "found_skills": [
+                "kubernetes",
+                "docker"
+              ],
+              "total_possible": 13
+            },
+            "data_engineering": {
+              "score": 9.1,
+              "found_skills": [
+                "postgres"
+              ],
+              "total_possible": 11
+            },
+            "modern_frontend": {
+              "score": 9.1,
+              "found_skills": [
+                "react"
+              ],
+              "total_possible": 11
+            },
+            "backend_modern": {
+              "score": 20.0,
+              "found_skills": [
+                "fastapi",
+                "flask"
+              ],
+              "total_possible": 10
+            },
+            "security": {
+              "score": 0.0,
+              "found_skills": [],
+              "total_possible": 8
+            },
+            "blockchain_web3": {
+              "score": 0.0,
+              "found_skills": [],
+              "total_possible": 7
+            }
+          },
+          "total_trending_skills_found": 14
+        },
+        "leadership_analysis": {
+          "leadership_score": 60.0,
+          "achievement_score": 0,
+          "leadership_indicators": [
+            "managed",
+            "coordinated",
+            "spearheaded"
+          ],
+          "quantified_achievements": [],
+          "leadership_count": 3,
+          "achievement_count": 0
+        },
+        "quality_analysis": {
+          "overall_quality_score": 71.9,
+          "readability_score": 55.0,
+          "action_verb_score": 70.0,
+          "technical_depth_score": 62.5,
+          "length_score": 100,
+          "word_count": 512,
+          "sentence_count": 17,
+          "flesch_reading_ease": 20.0,
+          "grade_level": 16.2,
+          "action_verbs_found": 7,
+          "tech_depth_indicators": 5
+        },
+        "certification_analysis": {
+          "certification_score": 25,
+          "valuable_certifications": [
+            "machine learning engineer"
+          ],
+          "certification_count": 1
+        },
+        "differentiation_analysis": {
+          "differentiation_score": 100,
+          "unique_elements": [
+            "metrics",
+            "scoring",
+            "peace",
+            "currency-specific",
+            "protocol",
+            "cutting",
+            "learnign",
+            "◦won",
+            "◦managed",
+            "•data"
+          ],
+          "specialized_terms": [
+            "claude",
+            "fine-tuning"
+          ],
+          "uniqueness_ratio": 10.5
+        },
+        "experience_analysis": {
+          "type_match_score": 40.0,
+          "required_years": 4,
+          "resume_years": 0,
+          "experience_entries": 1
+        },
+        "education_analysis": {
+          "message": "No specific education requirements"
+        }
+      },
+      "competitive_advantages": [
+        "Unique skills that differentiate from other candidates"
+      ],
+      "market_positioning": {
+        "tier": "Developing",
+        "description": "Candidate with potential but needs significant skill development",
+        "market_readiness": "Nearly Ready",
+        "recommendation": "Consider for junior roles or internship programs"
+      },
+      "strengths": [
+        "Strong ai ml expertise (42.1%)",
+        "Demonstrated leadership experience (3 indicators)",
+        "Strong action-oriented language",
+        "Good technical depth and terminology"
+      ],
+      "recommendations": [
+        "Priority skills to acquire: other generative ai tools, storage, prophet",
+        "Consider learning trending security technologies",
+        "Add quantifiable metrics and business impact to achievements",
+        "Improve resume clarity and professional writing style",
+        "Focus on skills that differentiate you from other candidates",
+        "Consider contributing to open source projects or building a portfolio"
+      ],
+      "extracted_info": {
+        "skills_found": 7,
+        "experience_years": 0,
+        "education_count": 1,
+        "projects_count": 12,
+        "certifications_count": 0,
+        "leadership_indicators": 3,
+        "quantified_achievements": 0
+      },
+      "rank": 1
+    },
+    {
+      "candidate_name": "fullstack",
+      "file_name": "fullstack.pdf",
+      "overall_score": 40.0,
+      "score_breakdown": {
+        "core_skills": 27.6,
+        "market_relevance": 24.1,
+        "leadership_impact": 0.0,
+        "resume_quality": 71.7,
+        "certifications": 25,
+        "differentiation": 100
+      },
+      "detailed_analysis": {
+        "technical_skills": {
+          "matched": [
+            "such as javascript"
+          ],
+          "missing": [
+            "other generative ai tools",
+            "storage",
+            "prophet",
+            "deploying ai",
+            "developing",
+            "to build cutting-edge ai applications",
+            "implementing rag workflows",
+            "time series",
+            "langchain",
+            "pinecone",
+            "like tensorflow",
+            "openai api",
+            "ml frameworks like tensorflow",
+            "arima",
+            "pytorch",
+            "faiss",
+            "sql",
+            "accuracy",
+            "models (llms",
+            "huggingface transformers",
+            ": 1",
+            "techniques",
+            "weaviate",
+            "to enhance performance",
+            "scikit-learn",
+            "focusing on nlp",
+            "generative ai applications",
+            "lstm",
+            "similar vectordbs for document retrieval",
+            "ml models",
+            "other forecasting techniques",
+            "langgraph",
+            "with langgraph",
+            "fine-tuning",
+            "generative ai"
+          ],
+          "match_details": {
+            "such as javascript": {
+              "type": "semantic",
+              "matched_with": "•Programming Languages: JavaScript (TypeScript",
+              "similarity": 0.3441641470415076
+            }
+          }
+        },
+        "market_analysis": {
+          "overall_market_score": 24.1,
+          "category_scores": {
+            "ai_ml": {
+              "score": 26.3,
+              "found_skills": [
+                "llm",
+                "transformer",
+                "langchain",
+                "rag",
+                "prompt engineering"
+              ],
+              "total_possible": 19
+            },
+            "cloud_devops": {
+              "score": 38.5,
+              "found_skills": [
+                "kubernetes",
+                "docker",
+                "aws",
+                "gcp",
+                "github actions"
+              ],
+              "total_possible": 13
+            },
+            "data_engineering": {
+              "score": 18.2,
+              "found_skills": [
+                "mongodb",
+                "postgres"
+              ],
+              "total_possible": 11
+            },
+            "modern_frontend": {
+              "score": 18.2,
+              "found_skills": [
+                "react",
+                "typescript"
+              ],
+              "total_possible": 11
+            },
+            "backend_modern": {
+              "score": 30.0,
+              "found_skills": [
+                "fastapi",
+                "flask",
+                "express"
+              ],
+              "total_possible": 10
+            },
+            "security": {
+              "score": 25.0,
+              "found_skills": [
+                "oauth",
+                "jwt"
+              ],
+              "total_possible": 8
+            },
+            "blockchain_web3": {
+              "score": 0.0,
+              "found_skills": [],
+              "total_possible": 7
+            }
+          },
+          "total_trending_skills_found": 19
+        },
+        "leadership_analysis": {
+          "leadership_score": 0.0,
+          "achievement_score": 0,
+          "leadership_indicators": [],
+          "quantified_achievements": [],
+          "leadership_count": 0,
+          "achievement_count": 0
+        },
+        "quality_analysis": {
+          "overall_quality_score": 71.7,
+          "readability_score": 51.8,
+          "action_verb_score": 60.0,
+          "technical_depth_score": 75.0,
+          "length_score": 100,
+          "word_count": 517,
+          "sentence_count": 17,
+          "flesch_reading_ease": 16.8,
+          "grade_level": 16.1,
+          "action_verbs_found": 6,
+          "tech_depth_indicators": 6
+        },
+        "certification_analysis": {
+          "certification_score": 25,
+          "valuable_certifications": [
+            "machine learning engineer"
+          ],
+          "certification_count": 1
+        },
+        "differentiation_analysis": {
+          "differentiation_score": 100,
+          "unique_elements": [
+            "twilio",
+            "meeting",
+            "browser",
+            "+nlp",
+            "founder",
+            "source",
+            "trading",
+            "past",
+            "secret-safe",
+            "attendance"
+          ],
+          "specialized_terms": [],
+          "uniqueness_ratio": 17.8
+        },
+        "experience_analysis": {
+          "type_match_score": 40.0,
+          "required_years": 4,
+          "resume_years": 0,
+          "experience_entries": 1
+        },
+        "education_analysis": {
+          "message": "No specific education requirements"
+        }
+      },
+      "competitive_advantages": [
+        "Strong alignment with current market trends",
+        "Unique skills that differentiate from other candidates"
+      ],
+      "market_positioning": {
+        "tier": "Developing",
+        "description": "Candidate with potential but needs significant skill development",
+        "market_readiness": "Market Ready",
+        "recommendation": "Consider for junior roles or internship programs"
+      },
+      "strengths": [
+        "Strong cloud devops expertise (38.5%)",
+        "Good technical depth and terminology"
+      ],
+      "recommendations": [
+        "Priority skills to acquire: other generative ai tools, storage, prophet",
+        "Consider learning trending blockchain web3 technologies",
+        "Highlight leadership roles, team collaboration, or mentoring experience",
+        "Add quantifiable metrics and business impact to achievements",
+        "Improve resume clarity and professional writing style",
+        "Focus on skills that differentiate you from other candidates",
+        "Consider contributing to open source projects or building a portfolio"
+      ],
+      "extracted_info": {
+        "skills_found": 2,
+        "experience_years": 0,
+        "education_count": 1,
+        "projects_count": 6,
+        "certifications_count": 0,
+        "leadership_indicators": 0,
+        "quantified_achievements": 0
+      },
+      "rank": 2
+    },
+    {
+      "candidate_name": "java_resume",
+      "file_name": "java_resume.pdf",
+      "overall_score": 40.0,
+      "score_breakdown": {
+        "core_skills": 28.7,
+        "market_relevance": 20.3,
+        "leadership_impact": 24.0,
+        "resume_quality": 67.6,
+        "certifications": 0,
+        "differentiation": 100
+      },
+      "detailed_analysis": {
+        "technical_skills": {
+          "matched": [
+            "such as javascript",
+            "sql"
+          ],
+          "missing": [
+            "other generative ai tools",
+            "storage",
+            "prophet",
+            "deploying ai",
+            "developing",
+            "to build cutting-edge ai applications",
+            "implementing rag workflows",
+            "time series",
+            "langchain",
+            "pinecone",
+            "like tensorflow",
+            "openai api",
+            "ml frameworks like tensorflow",
+            "arima",
+            "pytorch",
+            "faiss",
+            "accuracy",
+            "models (llms",
+            "huggingface transformers",
+            ": 1",
+            "techniques",
+            "weaviate",
+            "to enhance performance",
+            "scikit-learn",
+            "focusing on nlp",
+            "generative ai applications",
+            "lstm",
+            "similar vectordbs for document retrieval",
+            "ml models",
+            "other forecasting techniques",
+            "langgraph",
+            "with langgraph",
+            "fine-tuning",
+            "generative ai"
+          ],
+          "match_details": {
+            "such as javascript": {
+              "type": "partial",
+              "matched_with": "JavaScript"
+            },
+            "sql": {
+              "type": "exact",
+              "matched_with": "SQL"
+            }
+          }
+        },
+        "market_analysis": {
+          "overall_market_score": 20.3,
+          "category_scores": {
+            "ai_ml": {
+              "score": 5.3,
+              "found_skills": [
+                "rag"
+              ],
+              "total_possible": 19
+            },
+            "cloud_devops": {
+              "score": 38.5,
+              "found_skills": [
+                "kubernetes",
+                "docker",
+                "jenkins",
+                "ci/cd",
+                "microservices"
+              ],
+              "total_possible": 13
+            },
+            "data_engineering": {
+              "score": 27.3,
+              "found_skills": [
+                "kafka",
+                "mongodb",
+                "postgres"
+              ],
+              "total_possible": 11
+            },
+            "modern_frontend": {
+              "score": 27.3,
+              "found_skills": [
+                "react",
+                "angular",
+                "typescript"
+              ],
+              "total_possible": 11
+            },
+            "backend_modern": {
+              "score": 30.0,
+              "found_skills": [
+                "fastapi",
+                "flask",
+                "rest api"
+              ],
+              "total_possible": 10
+            },
+            "security": {
+              "score": 12.5,
+              "found_skills": [
+                "jwt"
+              ],
+              "total_possible": 8
+            },
+            "blockchain_web3": {
+              "score": 0.0,
+              "found_skills": [],
+              "total_possible": 7
+            }
+          },
+          "total_trending_skills_found": 16
+        },
+        "leadership_analysis": {
+          "leadership_score": 40.0,
+          "achievement_score": 0,
+          "leadership_indicators": [
+            "coordinated",
+            "spearheaded"
+          ],
+          "quantified_achievements": [],
+          "leadership_count": 2,
+          "achievement_count": 0
+        },
+        "quality_analysis": {
+          "overall_quality_score": 67.6,
+          "readability_score": 50.3,
+          "action_verb_score": 70.0,
+          "technical_depth_score": 50.0,
+          "length_score": 100,
+          "word_count": 450,
+          "sentence_count": 16,
+          "flesch_reading_ease": 15.3,
+          "grade_level": 16.4,
+          "action_verbs_found": 7,
+          "tech_depth_indicators": 4
+        },
+        "certification_analysis": {
+          "certification_score": 0,
+          "valuable_certifications": [],
+          "certification_count": 0
+        },
+        "differentiation_analysis": {
+          "differentiation_score": 100,
+          "unique_elements": [
+            "product",
+            "hibernate",
+            "raising",
+            "angular.js",
+            "authentication",
+            "•databases",
+            "standards",
+            "springboot",
+            "30built",
+            "◦optimized"
+          ],
+          "specialized_terms": [
+            "ci/cd",
+            "kafka",
+            "microservices",
+            "jenkins"
+          ],
+          "uniqueness_ratio": 19.8
+        },
+        "experience_analysis": {
+          "type_match_score": 40.0,
+          "required_years": 4,
+          "resume_years": 0,
+          "experience_entries": 1
+        },
+        "education_analysis": {
+          "message": "No specific education requirements"
+        }
+      },
+      "competitive_advantages": [
+        "Strong alignment with current market trends",
+        "Unique skills that differentiate from other candidates"
+      ],
+      "market_positioning": {
+        "tier": "Developing",
+        "description": "Candidate with potential but needs significant skill development",
+        "market_readiness": "Nearly Ready",
+        "recommendation": "Consider for junior roles or internship programs"
+      },
+      "strengths": [
+        "Strong cloud devops expertise (38.5%)",
+        "Strong action-oriented language"
+      ],
+      "recommendations": [
+        "Priority skills to acquire: other generative ai tools, storage, prophet",
+        "Consider learning trending blockchain web3 technologies",
+        "Add quantifiable metrics and business impact to achievements",
+        "Improve resume clarity and professional writing style",
+        "Focus on skills that differentiate you from other candidates",
+        "Consider contributing to open source projects or building a portfolio"
+      ],
+      "extracted_info": {
+        "skills_found": 14,
+        "experience_years": 0,
+        "education_count": 1,
+        "projects_count": 4,
+        "certifications_count": 0,
+        "leadership_indicators": 2,
+        "quantified_achievements": 0
+      },
+      "rank": 3
+    },
+    {
+      "candidate_name": "Analyst_resume",
+      "file_name": "Analyst_resume.pdf",
+      "overall_score": 36.2,
+      "score_breakdown": {
+        "core_skills": 26.5,
+        "market_relevance": 15.2,
+        "leadership_impact": 12.0,
+        "resume_quality": 64.7,
+        "certifications": 0,
+        "differentiation": 100
+      },
+      "detailed_analysis": {
+        "technical_skills": {
+          "matched": [],
+          "missing": [
+            "other generative ai tools",
+            "storage",
+            "prophet",
+            "deploying ai",
+            "developing",
+            "to build cutting-edge ai applications",
+            "implementing rag workflows",
+            "time series",
+            "langchain",
+            "pinecone",
+            "such as javascript",
+            "like tensorflow",
+            "openai api",
+            "ml frameworks like tensorflow",
+            "arima",
+            "pytorch",
+            "faiss",
+            "sql",
+            "accuracy",
+            "models (llms",
+            "huggingface transformers",
+            ": 1",
+            "techniques",
+            "weaviate",
+            "to enhance performance",
+            "scikit-learn",
+            "focusing on nlp",
+            "generative ai applications",
+            "lstm",
+            "similar vectordbs for document retrieval",
+            "ml models",
+            "other forecasting techniques",
+            "langgraph",
+            "with langgraph",
+            "fine-tuning",
+            "generative ai"
+          ],
+          "match_details": {}
+        },
+        "market_analysis": {
+          "overall_market_score": 15.2,
+          "category_scores": {
+            "ai_ml": {
+              "score": 21.1,
+              "found_skills": [
+                "llm",
+                "langchain",
+                "rag",
+                "openai"
+              ],
+              "total_possible": 19
+            },
+            "cloud_devops": {
+              "score": 15.4,
+              "found_skills": [
+                "docker",
+                "aws"
+              ],
+              "total_possible": 13
+            },
+            "data_engineering": {
+              "score": 18.2,
+              "found_skills": [
+                "mongodb",
+                "postgres"
+              ],
+              "total_possible": 11
+            },
+            "modern_frontend": {
+              "score": 9.1,
+              "found_skills": [
+                "react"
+              ],
+              "total_possible": 11
+            },
+            "backend_modern": {
+              "score": 20.0,
+              "found_skills": [
+                "fastapi",
+                "flask"
+              ],
+              "total_possible": 10
+            },
+            "security": {
+              "score": 12.5,
+              "found_skills": [
+                "cybersecurity"
+              ],
+              "total_possible": 8
+            },
+            "blockchain_web3": {
+              "score": 0.0,
+              "found_skills": [],
+              "total_possible": 7
+            }
+          },
+          "total_trending_skills_found": 12
+        },
+        "leadership_analysis": {
+          "leadership_score": 20.0,
+          "achievement_score": 0,
+          "leadership_indicators": [
+            "managed"
+          ],
+          "quantified_achievements": [],
+          "leadership_count": 1,
+          "achievement_count": 0
+        },
+        "quality_analysis": {
+          "overall_quality_score": 64.7,
+          "readability_score": 51.4,
+          "action_verb_score": 70.0,
+          "technical_depth_score": 37.5,
+          "length_score": 100,
+          "word_count": 358,
+          "sentence_count": 16,
+          "flesch_reading_ease": 16.4,
+          "grade_level": 14.7,
+          "action_verbs_found": 7,
+          "tech_depth_indicators": 3
+        },
+        "certification_analysis": {
+          "certification_score": 0,
+          "valuable_certifications": [],
+          "certification_count": 0
+        },
+        "differentiation_analysis": {
+          "differentiation_score": 100,
+          "unique_elements": [
+            "analyze",
+            "assessment",
+            "optimize",
+            "codeforces/shinee",
+            "form-filling",
+            "planning",
+            "developers",
+            "redis",
+            "guptaa",
+            "dashboards"
+          ],
+          "specialized_terms": [
+            "cybersecurity"
+          ],
+          "uniqueness_ratio": 21.9
+        },
+        "experience_analysis": {
+          "type_match_score": 40.0,
+          "required_years": 4,
+          "resume_years": 0,
+          "experience_entries": 1
+        },
+        "education_analysis": {
+          "message": "No specific education requirements"
+        }
+      },
+      "competitive_advantages": [
+        "Unique skills that differentiate from other candidates"
+      ],
+      "market_positioning": {
+        "tier": "Developing",
+        "description": "Candidate with potential but needs significant skill development",
+        "market_readiness": "Nearly Ready",
+        "recommendation": "Consider for junior roles or internship programs"
+      },
+      "strengths": [
+        "Strong ai ml expertise (21.1%)",
+        "Strong action-oriented language"
+      ],
+      "recommendations": [
+        "Priority skills to acquire: other generative ai tools, storage, prophet",
+        "Consider learning trending blockchain web3 technologies",
+        "Highlight leadership roles, team collaboration, or mentoring experience",
+        "Add quantifiable metrics and business impact to achievements",
+        "Include more technical details about tools, frameworks, and methodologies",
+        "Improve resume clarity and professional writing style",
+        "Focus on skills that differentiate you from other candidates",
+        "Consider contributing to open source projects or building a portfolio"
+      ],
+      "extracted_info": {
+        "skills_found": 1,
+        "experience_years": 0,
+        "education_count": 0,
+        "projects_count": 10,
+        "certifications_count": 0,
+        "leadership_indicators": 1,
+        "quantified_achievements": 0
+      },
+      "rank": 4
+    },
+    {
+      "candidate_name": "Academic_CV_Template",
+      "file_name": "Academic_CV_Template.pdf",
+      "overall_score": 35.0,
+      "score_breakdown": {
+        "core_skills": 34.3,
+        "market_relevance": 6.3,
+        "leadership_impact": 12.0,
+        "resume_quality": 56.1,
+        "certifications": 0,
+        "differentiation": 100
+      },
+      "detailed_analysis": {
+        "technical_skills": {
+          "matched": [
+            "langchain",
+            "openai api",
+            "pytorch",
+            "models (llms",
+            "huggingface transformers",
+            "scikit-learn",
+            "such as javascript"
+          ],
+          "missing": [
+            "other generative ai tools",
+            "storage",
+            "prophet",
+            "deploying ai",
+            "developing",
+            "to build cutting-edge ai applications",
+            "implementing rag workflows",
+            "time series",
+            "pinecone",
+            "like tensorflow",
+            "ml frameworks like tensorflow",
+            "arima",
+            "faiss",
+            "sql",
+            "accuracy",
+            ": 1",
+            "techniques",
+            "weaviate",
+            "to enhance performance",
+            "focusing on nlp",
+            "generative ai applications",
+            "lstm",
+            "similar vectordbs for document retrieval",
+            "ml models",
+            "other forecasting techniques",
+            "langgraph",
+            "with langgraph",
+            "fine-tuning",
+            "generative ai"
+          ],
+          "match_details": {
+            "langchain": {
+              "type": "exact",
+              "matched_with": "LangChain"
+            },
+            "openai api": {
+              "type": "partial",
+              "matched_with": "NLP (OpenAI API"
+            },
+            "pytorch": {
+              "type": "exact",
+              "matched_with": "PyTorch"
+            },
+            "models (llms": {
+              "type": "partial",
+              "matched_with": "LLMs"
+            },
+            "huggingface transformers": {
+              "type": "partial",
+              "matched_with": "Transformers"
+            },
+            "scikit-learn": {
+              "type": "exact",
+              "matched_with": "scikit-learn"
+            },
+            "such as javascript": {
+              "type": "semantic",
+              "matched_with": "Javascript(Novice) •Frameworks: TensorFlow",
+              "similarity": 0.359475323926137
+            }
+          }
+        },
+        "market_analysis": {
+          "overall_market_score": 6.3,
+          "category_scores": {
+            "ai_ml": {
+              "score": 21.1,
+              "found_skills": [
+                "llm",
+                "transformer",
+                "langchain",
+                "openai"
+              ],
+              "total_possible": 19
+            },
+            "cloud_devops": {
+              "score": 0.0,
+              "found_skills": [],
+              "total_possible": 13
+            },
+            "data_engineering": {
+              "score": 0.0,
+              "found_skills": [],
+              "total_possible": 11
+            },
+            "modern_frontend": {
+              "score": 0.0,
+              "found_skills": [],
+              "total_possible": 11
+            },
+            "backend_modern": {
+              "score": 10.0,
+              "found_skills": [
+                "flask"
+              ],
+              "total_possible": 10
+            },
+            "security": {
+              "score": 0.0,
+              "found_skills": [],
+              "total_possible": 8
+            },
+            "blockchain_web3": {
+              "score": 0.0,
+              "found_skills": [],
+              "total_possible": 7
+            }
+          },
+          "total_trending_skills_found": 5
+        },
+        "leadership_analysis": {
+          "leadership_score": 20.0,
+          "achievement_score": 0,
+          "leadership_indicators": [
+            "managed"
+          ],
+          "quantified_achievements": [],
+          "leadership_count": 1,
+          "achievement_count": 0
+        },
+        "quality_analysis": {
+          "overall_quality_score": 56.1,
+          "readability_score": 44.5,
+          "action_verb_score": 30.0,
+          "technical_depth_score": 50.0,
+          "length_score": 100,
+          "word_count": 480,
+          "sentence_count": 16,
+          "flesch_reading_ease": 9.5,
+          "grade_level": 16.9,
+          "action_verbs_found": 3,
+          "tech_depth_indicators": 4
+        },
+        "certification_analysis": {
+          "certification_score": 0,
+          "valuable_certifications": [],
+          "certification_count": 0
+        },
+        "differentiation_analysis": {
+          "differentiation_score": 100,
+          "unique_elements": [
+            "medication",
+            "total",
+            "thriving",
+            "+91-8433135192",
+            "globally",
+            "app-",
+            "allowing",
+            "1.5cr",
+            "percentage-96.6",
+            "◦real-time"
+          ],
+          "specialized_terms": [],
+          "uniqueness_ratio": 58.0
+        },
+        "experience_analysis": {
+          "type_match_score": 40.0,
+          "required_years": 4,
+          "resume_years": 0,
+          "experience_entries": 1
+        },
+        "education_analysis": {
+          "message": "No specific education requirements"
+        }
+      },
+      "competitive_advantages": [
+        "Unique skills that differentiate from other candidates"
+      ],
+      "market_positioning": {
+        "tier": "Developing",
+        "description": "Candidate with potential but needs significant skill development",
+        "market_readiness": "Needs Preparation",
+        "recommendation": "Consider for junior roles or internship programs"
+      },
+      "strengths": [],
+      "recommendations": [
+        "Priority skills to acquire: other generative ai tools, storage, prophet",
+        "Consider learning trending cloud devops technologies",
+        "Highlight leadership roles, team collaboration, or mentoring experience",
+        "Add quantifiable metrics and business impact to achievements",
+        "Use more action verbs to demonstrate impact and initiative",
+        "Improve resume clarity and professional writing style",
+        "Focus on skills that differentiate you from other candidates",
+        "Consider contributing to open source projects or building a portfolio"
+      ],
+      "extracted_info": {
+        "skills_found": 22,
+        "experience_years": 0,
+        "education_count": 1,
+        "projects_count": 9,
+        "certifications_count": 0,
+        "leadership_indicators": 1,
+        "quantified_achievements": 0
+      },
+      "rank": 5
+    },
+    {
+      "candidate_name": "FAANGPath_Simple_Template",
+      "file_name": "FAANGPath_Simple_Template.pdf",
+      "overall_score": 34.8,
+      "score_breakdown": {
+        "core_skills": 27.6,
+        "market_relevance": 16.5,
+        "leadership_impact": 8.0,
+        "resume_quality": 55.7,
+        "certifications": 0,
+        "differentiation": 100
+      },
+      "detailed_analysis": {
+        "technical_skills": {
+          "matched": [
+            "such as javascript"
+          ],
+          "missing": [
+            "other generative ai tools",
+            "storage",
+            "prophet",
+            "deploying ai",
+            "developing",
+            "to build cutting-edge ai applications",
+            "implementing rag workflows",
+            "time series",
+            "langchain",
+            "pinecone",
+            "like tensorflow",
+            "openai api",
+            "ml frameworks like tensorflow",
+            "arima",
+            "pytorch",
+            "faiss",
+            "sql",
+            "accuracy",
+            "models (llms",
+            "huggingface transformers",
+            ": 1",
+            "techniques",
+            "weaviate",
+            "to enhance performance",
+            "scikit-learn",
+            "focusing on nlp",
+            "generative ai applications",
+            "lstm",
+            "similar vectordbs for document retrieval",
+            "ml models",
+            "other forecasting techniques",
+            "langgraph",
+            "with langgraph",
+            "fine-tuning",
+            "generative ai"
+          ],
+          "match_details": {
+            "such as javascript": {
+              "type": "partial",
+              "matched_with": "JavaScript"
+            }
+          }
+        },
+        "market_analysis": {
+          "overall_market_score": 16.5,
+          "category_scores": {
+            "ai_ml": {
+              "score": 21.1,
+              "found_skills": [
+                "llm",
+                "transformer",
+                "langchain",
+                "openai"
+              ],
+              "total_possible": 19
+            },
+            "cloud_devops": {
+              "score": 15.4,
+              "found_skills": [
+                "docker",
+                "aws"
+              ],
+              "total_possible": 13
+            },
+            "data_engineering": {
+              "score": 18.2,
+              "found_skills": [
+                "mongodb",
+                "postgres"
+              ],
+              "total_possible": 11
+            },
+            "modern_frontend": {
+              "score": 9.1,
+              "found_skills": [
+                "react"
+              ],
+              "total_possible": 11
+            },
+            "backend_modern": {
+              "score": 40.0,
+              "found_skills": [
+                "fastapi",
+                "flask",
+                "nodejs",
+                "rest api"
+              ],
+              "total_possible": 10
+            },
+            "security": {
+              "score": 0.0,
+              "found_skills": [],
+              "total_possible": 8
+            },
+            "blockchain_web3": {
+              "score": 0.0,
+              "found_skills": [],
+              "total_possible": 7
+            }
+          },
+          "total_trending_skills_found": 13
+        },
+        "leadership_analysis": {
+          "leadership_score": 0.0,
+          "achievement_score": 20,
+          "leadership_indicators": [],
+          "quantified_achievements": [
+            "40% reduction"
+          ],
+          "leadership_count": 0,
+          "achievement_count": 1
+        },
+        "quality_analysis": {
+          "overall_quality_score": 55.7,
+          "readability_score": 73.0,
+          "action_verb_score": 50.0,
+          "technical_depth_score": 0.0,
+          "length_score": 100,
+          "word_count": 380,
+          "sentence_count": 16,
+          "flesch_reading_ease": 38.0,
+          "grade_level": 12.2,
+          "action_verbs_found": 5,
+          "tech_depth_indicators": 0
+        },
+        "certification_analysis": {
+          "certification_score": 0,
+          "valuable_certifications": [],
+          "certification_count": 0
+        },
+        "differentiation_analysis": {
+          "differentiation_score": 100,
+          "unique_elements": [
+            "also",
+            "indexed",
+            "instagram",
+            "alongside",
+            "•achieved",
+            "nlp-based",
+            "autonomous",
+            "bullet",
+            "•admin",
+            "filling"
+          ],
+          "specialized_terms": [
+            "nodejs"
+          ],
+          "uniqueness_ratio": 42.7
+        },
+        "experience_analysis": {
+          "type_match_score": 40.0,
+          "required_years": 4,
+          "resume_years": 0,
+          "experience_entries": 1
+        },
+        "education_analysis": {
+          "message": "No specific education requirements"
+        }
+      },
+      "competitive_advantages": [
+        "Unique skills that differentiate from other candidates"
+      ],
+      "market_positioning": {
+        "tier": "Entry Level",
+        "description": "Candidate requiring substantial development for this role",
+        "market_readiness": "Needs Preparation",
+        "recommendation": "Recommend skill development before consideration"
+      },
+      "strengths": [
+        "Strong backend modern expertise (40.0%)"
+      ],
+      "recommendations": [
+        "Priority skills to acquire: other generative ai tools, storage, prophet",
+        "Consider learning trending security technologies",
+        "Highlight leadership roles, team collaboration, or mentoring experience",
+        "Include more technical details about tools, frameworks, and methodologies",
+        "Focus on skills that differentiate you from other candidates",
+        "Consider contributing to open source projects or building a portfolio"
+      ],
+      "extracted_info": {
+        "skills_found": 9,
+        "experience_years": 0,
+        "education_count": 1,
+        "projects_count": 5,
+        "certifications_count": 0,
+        "leadership_indicators": 0,
+        "quantified_achievements": 1
+      },
+      "rank": 6
+    },
+    {
+      "candidate_name": "OldResume",
+      "file_name": "OldResume.pdf",
+      "overall_score": 30.6,
+      "score_breakdown": {
+        "core_skills": 14.7,
+        "market_relevance": 5.1,
+        "leadership_impact": 12.0,
+        "resume_quality": 60.8,
+        "certifications": 0,
+        "differentiation": 100
+      },
+      "detailed_analysis": {
+        "technical_skills": {
+          "matched": [
+            "pytorch",
+            "scikit-learn"
+          ],
+          "missing": [
+            "other generative ai tools",
+            "storage",
+            "prophet",
+            "deploying ai",
+            "developing",
+            "to build cutting-edge ai applications",
+            "implementing rag workflows",
+            "time series",
+            "langchain",
+            "pinecone",
+            "such as javascript",
+            "like tensorflow",
+            "openai api",
+            "ml frameworks like tensorflow",
+            "arima",
+            "faiss",
+            "sql",
+            "accuracy",
+            "models (llms",
+            "huggingface transformers",
+            ": 1",
+            "techniques",
+            "weaviate",
+            "to enhance performance",
+            "focusing on nlp",
+            "generative ai applications",
+            "lstm",
+            "similar vectordbs for document retrieval",
+            "ml models",
+            "other forecasting techniques",
+            "langgraph",
+            "with langgraph",
+            "fine-tuning",
+            "generative ai"
+          ],
+          "match_details": {
+            "pytorch": {
+              "type": "exact",
+              "matched_with": "PyTorch"
+            },
+            "scikit-learn": {
+              "type": "exact",
+              "matched_with": "scikit-learn"
+            }
+          }
+        },
+        "market_analysis": {
+          "overall_market_score": 5.1,
+          "category_scores": {
+            "ai_ml": {
+              "score": 15.8,
+              "found_skills": [
+                "llm",
+                "transformer",
+                "rag"
+              ],
+              "total_possible": 19
+            },
+            "cloud_devops": {
+              "score": 0.0,
+              "found_skills": [],
+              "total_possible": 13
+            },
+            "data_engineering": {
+              "score": 0.0,
+              "found_skills": [],
+              "total_possible": 11
+            },
+            "modern_frontend": {
+              "score": 0.0,
+              "found_skills": [],
+              "total_possible": 11
+            },
+            "backend_modern": {
+              "score": 10.0,
+              "found_skills": [
+                "flask"
+              ],
+              "total_possible": 10
+            },
+            "security": {
+              "score": 0.0,
+              "found_skills": [],
+              "total_possible": 8
+            },
+            "blockchain_web3": {
+              "score": 0.0,
+              "found_skills": [],
+              "total_possible": 7
+            }
+          },
+          "total_trending_skills_found": 4
+        },
+        "leadership_analysis": {
+          "leadership_score": 20.0,
+          "achievement_score": 0,
+          "leadership_indicators": [
+            "managed"
+          ],
+          "quantified_achievements": [],
+          "leadership_count": 1,
+          "achievement_count": 0
+        },
+        "quality_analysis": {
+          "overall_quality_score": 60.8,
+          "readability_score": 35.8,
+          "action_verb_score": 70.0,
+          "technical_depth_score": 37.5,
+          "length_score": 100,
+          "word_count": 467,
+          "sentence_count": 13,
+          "flesch_reading_ease": 0.8,
+          "grade_level": 20.0,
+          "action_verbs_found": 7,
+          "tech_depth_indicators": 3
+        },
+        "certification_analysis": {
+          "certification_score": 0,
+          "valuable_certifications": [],
+          "certification_count": 0
+        },
+        "differentiation_analysis": {
+          "differentiation_score": 100,
+          "unique_elements": [
+            "detection",
+            "steps",
+            "programming",
+            "muradnagar",
+            "position",
+            "shadows",
+            "shastri",
+            "https",
+            "predictions",
+            "innovation"
+          ],
+          "specialized_terms": [],
+          "uniqueness_ratio": 52.0
+        },
+        "experience_analysis": {
+          "type_match_score": 0.0,
+          "required_years": 4,
+          "resume_years": 0,
+          "experience_entries": 1
+        },
+        "education_analysis": {
+          "message": "No specific education requirements"
+        }
+      },
+      "competitive_advantages": [
+        "Unique skills that differentiate from other candidates"
+      ],
+      "market_positioning": {
+        "tier": "Entry Level",
+        "description": "Candidate requiring substantial development for this role",
+        "market_readiness": "Needs Preparation",
+        "recommendation": "Recommend skill development before consideration"
+      },
+      "strengths": [
+        "Strong action-oriented language"
+      ],
+      "recommendations": [
+        "Priority skills to acquire: other generative ai tools, storage, prophet",
+        "Consider learning trending cloud devops technologies",
+        "Highlight leadership roles, team collaboration, or mentoring experience",
+        "Add quantifiable metrics and business impact to achievements",
+        "Include more technical details about tools, frameworks, and methodologies",
+        "Improve resume clarity and professional writing style",
+        "Emphasize relevant projects, internships, or freelance work",
+        "Focus on skills that differentiate you from other candidates",
+        "Consider contributing to open source projects or building a portfolio"
+      ],
+      "extracted_info": {
+        "skills_found": 21,
+        "experience_years": 0,
+        "education_count": 1,
+        "projects_count": 17,
+        "certifications_count": 0,
+        "leadership_indicators": 1,
+        "quantified_achievements": 0
+      },
+      "rank": 7
+    }
+  ],
+  "statistics": {
+    "score_distribution": {
+      "excellent_80_plus": 0,
+      "good_60_to_79": 0,
+      "fair_40_to_59": 3,
+      "poor_below_40": 4
+    },
+    "average_score": 37.2,
+    "median_score": 36.2
+  }
+}
