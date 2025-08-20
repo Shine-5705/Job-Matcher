@@ -2,7 +2,16 @@
 
 ## AI-Powered Resume Screening for International Students
 
-A sophisticated Applicant Tracking System (ATS) designed specifically for **Northbridge's international student job placement platform**. This system leverages advanced AI/ML algorithms to match resumes with job descriptions, providing comprehensive candidate analysis and market intelligence.
+A sophisticated Applicant Tracking System (ATS) designed specifically for **international student searching jobs**. This system leverages advanced AI/ML algorithms to match resumes with job descriptions, providing comprehensive candidate analysis and market intelligence.
+
+## 🌐 **Live Demo**
+**🔗 Try it now:** [https://job-matcher-ats-checker.onrender.com](https://job-matcher-ats-checker.onrender.com)
+
+Experience the full web application with:
+- **Interactive File Upload** - Drag-and-drop resume and job description processing
+- **Real-time Analysis** - See AI-powered scoring in action
+- **Professional Dashboard** - Comprehensive results visualization
+- **Export Capabilities** - Download reports in multiple formats
 
 ---
 
@@ -28,6 +37,14 @@ A sophisticated Applicant Tracking System (ATS) designed specifically for **Nort
 - **Skill Gap Analysis** - Identification of missing competencies
 - **Competitive Advantages** - Unique candidate strengths
 - **Interview Recommendations** - Data-driven hiring decisions
+
+### 🌐 **Web Application Features**
+- **Modern Web Interface** - Professional, responsive design
+- **Drag-and-Drop Upload** - Intuitive file handling with progress tracking
+- **Interactive Charts** - Chart.js powered data visualizations
+- **Real-time Processing** - Live analysis feedback and status updates
+- **Export Options** - PDF reports, Excel data, JSON files
+- **Demo Mode** - Sample data for immediate testing
 
 ---
 
@@ -57,6 +74,8 @@ python -c "import nltk; nltk.download('punkt'); nltk.download('stopwords')"
 
 ### Dependencies
 ```
+Flask>=2.3.0
+gunicorn>=21.2.0
 PyPDF2>=3.0.0
 pandas>=1.5.0
 nltk>=3.8
@@ -64,7 +83,8 @@ scikit-learn>=1.2.0
 numpy>=1.24.0
 textstat>=0.7.0
 textblob>=0.17.0
-spacy>=3.5.0  # Optional: for enhanced NLP
+Werkzeug>=2.3.0
+spacy  # Optional: for enhanced NLP
 ```
 
 ---
@@ -73,7 +93,16 @@ spacy>=3.5.0  # Optional: for enhanced NLP
 
 ```
 Job-Matcher/
-├── ats_parser.py              # Main application
+├── ats_parser.py              # Main analysis engine
+├── app.py                     # Flask web application
+├── templates/                 # Web interface templates
+│   ├── base.html             # Base layout
+│   ├── index.html            # Homepage
+│   ├── upload.html           # File upload interface
+│   ├── demo.html             # Interactive demo
+│   └── results.html          # Analysis results dashboard
+├── static/                    # Web assets
+│   └── style.css             # Custom styling
 ├── jD/                        # Job Description PDFs
 │   └── AI Engineer - Job Description.pdf
 ├── Candidate_resume/          # Resume PDFs
@@ -84,6 +113,8 @@ Job-Matcher/
 ├── advanced_ats_analysis.json # Detailed results
 ├── advanced_ats_analysis.csv  # Summary spreadsheet
 ├── requirements.txt           # Dependencies
+├── render.yaml               # Deployment configuration
+├── DEPLOYMENT.md             # Deployment guide
 └── README.md                 # This file
 ```
 
@@ -91,13 +122,24 @@ Job-Matcher/
 
 ## 🚀 Usage
 
-### Quick Start
+### 🌐 **Web Application (Recommended)**
+**Live Demo:** [https://job-matcher-ats-checker.onrender.com](https://job-matcher-ats-checker.onrender.com)
+
+1. **Upload Files** - Drag and drop your job description PDF and resume PDFs
+2. **Start Analysis** - Click analyze to begin AI-powered processing
+3. **View Results** - See comprehensive scoring and candidate rankings
+4. **Export Reports** - Download detailed analysis in your preferred format
+
+### 💻 **Local Installation**
 ```bash
 # Activate virtual environment
 venv\Scripts\activate
 
 # Run the ATS matcher
 python ats_parser.py
+
+# Or start the web application locally
+python app.py
 ```
 
 ### Input Requirements
@@ -263,20 +305,37 @@ python ats_parser.py
 
 ## 🚀 Deployment
 
+### 🌐 **Production Deployment**
+**Live Application:** [https://job-matcher-ats-checker.onrender.com](https://job-matcher-ats-checker.onrender.com)
+
+The application is deployed on Render with:
+- **Auto-scaling** web server (Gunicorn)
+- **Production security** with environment variables
+- **Automated NLTK data** setup during build
+- **Health monitoring** and error handling
+- **SSL encryption** and secure file processing
+
+### 📋 **Deploy Your Own Instance**
+See [DEPLOYMENT.md](DEPLOYMENT.md) for detailed deployment instructions on:
+- **Render** (recommended)
+- **Heroku**
+- **AWS/GCP**
+- **Docker**
+
 ### Production Considerations
 - **Scalability**: Process 100+ resumes in minutes
-- **Security**: No data stored permanently, processed locally
+- **Security**: No data stored permanently, processed securely
 - **Integration**: JSON/CSV outputs for easy system integration
 - **Performance**: Optimized for large-scale screening
 
-### Cloud Deployment
+### Local Development
 ```bash
-# Docker deployment example
-FROM python:3.10-slim
-COPY . /app
-WORKDIR /app
-RUN pip install -r requirements.txt
-CMD ["python", "ats_parser.py"]
+# Start web application locally
+python app.py
+# Access at http://localhost:5000
+
+# Or run CLI version
+python ats_parser.py
 ```
 
 ---
@@ -294,8 +353,10 @@ python -m pytest tests/  # Run tests
 ### Feature Requests
 - 🔄 Real-time processing API
 - 📧 Email integration for automated screening
-- 🌐 Web dashboard for recruiters
+- 🌐 ✅ **Web dashboard for recruiters** (Live!)
 - 📱 Mobile app for candidates
+- 🤖 AI-powered interview scheduling
+- 📊 Advanced analytics dashboard
 
 ---
 
@@ -362,10 +423,16 @@ MIT License - see [LICENSE](LICENSE) file for details.
 
 ## 🔮 Roadmap
 
-### Q4 2024
-- [ ] Web-based dashboard
-- [ ] Real-time API endpoints
-- [ ] Advanced visualization charts
+### ✅ **Recently Completed (Q3 2025)**
+- ✅ **Web-based dashboard** - Professional interface with modern UI
+- ✅ **Real-time file processing** - Drag-and-drop with progress tracking
+- ✅ **Advanced visualization** - Interactive charts and analytics
+- ✅ **Production deployment** - Live on Render with auto-scaling
+
+### Q4 2025
+- [ ] Real-time API endpoints for integrations
+- [ ] Advanced export options (PDF reports)
+- [ ] Email notification system
 
 ### Q1 2025  
 - [ ] Machine learning model training on historical data
@@ -379,7 +446,7 @@ MIT License - see [LICENSE](LICENSE) file for details.
 
 ---
 
-**Built with ❤️ for Northbridge's mission to help international students succeed in the US job market.**
+**Built with ❤️ by Shine Gupta.**
 
 ---
 
