@@ -31,6 +31,15 @@ def index():
     """Homepage with feature showcase"""
     return render_template('index.html')
 
+@app.route('/health')
+def health_check():
+    """Health check endpoint for deployment monitoring"""
+    return jsonify({
+        'status': 'healthy',
+        'timestamp': datetime.now().isoformat(),
+        'service': 'ATS Resume Matcher'
+    })
+
 @app.route('/upload')
 def upload_page():
     """Upload page for job descriptions and resumes"""
@@ -39,13 +48,115 @@ def upload_page():
 @app.route('/demo')
 def demo_page():
     """Demo page showing sample analysis"""
-    # Check if we have sample results
-    sample_file = 'advanced_ats_analysis.json'
-    if os.path.exists(sample_file):
-        with open(sample_file, 'r', encoding='utf-8') as f:
-            sample_data = json.load(f)
+    try:
+        # Get sample data directly from function
+        sample_data = {
+            "job_description_file": "AI Engineer - Job Description.pdf",
+            "job_title": "AI Engineer - Machine Learning",
+            "processing_timestamp": datetime.now().isoformat(),
+            "total_candidates": 7,
+            "processing_time": "1.8 minutes",
+            "processing_errors": [],
+            "candidates": [
+                {
+                    "rank": 1,
+                    "candidate_name": "lateset_shine_res",
+                    "overall_score": 44.1,
+                    "score_breakdown": {
+                        "core_skills": 27.6,
+                        "market_relevance": 17.7,
+                        "leadership_impact": 36.0,
+                        "resume_quality": 71.9,
+                        "certifications": 25,
+                        "differentiation": 100
+                    },
+                    "market_positioning": {
+                        "tier": "Developing",
+                        "market_readiness": "Nearly Ready",
+                        "recommendation": "Consider for junior roles or internship programs"
+                    },
+                    "strengths": [
+                        "Strong AI/ML expertise (42.1%)",
+                        "Demonstrated leadership experience (3 indicators)",
+                        "Good technical depth and terminology"
+                    ],
+                    "competitive_advantages": [
+                        "Unique skills that differentiate from other candidates",
+                        "Strong alignment with current market trends"
+                    ]
+                },
+                {
+                    "rank": 2,
+                    "candidate_name": "fullstack",
+                    "overall_score": 40.0,
+                    "score_breakdown": {
+                        "core_skills": 27.6,
+                        "market_relevance": 24.1,
+                        "leadership_impact": 0.0,
+                        "resume_quality": 71.7,
+                        "certifications": 25,
+                        "differentiation": 100
+                    },
+                    "market_positioning": {
+                        "tier": "Developing",
+                        "market_readiness": "Market Ready",
+                        "recommendation": "Consider for junior roles or internship programs"
+                    },
+                    "strengths": [
+                        "Strong Cloud/DevOps expertise (38.5%)",
+                        "Good technical depth and terminology"
+                    ],
+                    "competitive_advantages": [
+                        "Strong alignment with current market trends",
+                        "Versatile technology stack"
+                    ]
+                },
+                {
+                    "rank": 3,
+                    "candidate_name": "java_resume",
+                    "overall_score": 40.0,
+                    "score_breakdown": {
+                        "core_skills": 28.7,
+                        "market_relevance": 20.3,
+                        "leadership_impact": 24.0,
+                        "resume_quality": 67.6,
+                        "certifications": 0,
+                        "differentiation": 100
+                    },
+                    "market_positioning": {
+                        "tier": "Developing",
+                        "market_readiness": "Nearly Ready",
+                        "recommendation": "Consider for junior roles or internship programs"
+                    },
+                    "strengths": [
+                        "Strong Cloud/DevOps expertise (38.5%)",
+                        "Strong action-oriented language"
+                    ],
+                    "competitive_advantages": [
+                        "Strong alignment with current market trends"
+                    ]
+                }
+            ],
+            "statistics": {
+                "score_distribution": {
+                    "excellent_80_plus": 0,
+                    "good_60_to_79": 0,
+                    "fair_40_to_59": 3,
+                    "poor_below_40": 4
+                },
+                "average_score": 37.2,
+                "median_score": 36.2
+            },
+            "market_gaps": [
+                "Generative AI applications",
+                "Vector databases", 
+                "Time series analysis"
+            ]
+        }
         return render_template('demo.html', results=sample_data)
-    else:
+    except Exception as e:
+        print(f"Demo page error: {e}")
+        # Return empty demo page
         return render_template('demo.html', results=None)
 
 @app.route('/api/upload', methods=['POST'])
@@ -172,13 +283,124 @@ def download_results():
 @app.route('/results')
 def results_page():
     """Display analysis results"""
-    # Check for recent results
-    sample_file = 'advanced_ats_analysis.json'
-    if os.path.exists(sample_file):
-        with open(sample_file, 'r', encoding='utf-8') as f:
-            results_data = json.load(f)
-        return render_template('results.html', results=results_data)
-    else:
+    try:
+        # Get sample data directly for demo purposes
+        sample_data = {
+            "job_description_file": "AI Engineer - Job Description.pdf",
+            "job_title": "AI Engineer - Machine Learning",
+            "processing_timestamp": datetime.now().isoformat(),
+            "total_candidates": 7,
+            "processing_time": "1.8 minutes",
+            "processing_errors": [],
+            "candidates": [
+                {
+                    "rank": 1,
+                    "candidate_name": "lateset_shine_res",
+                    "overall_score": 44.1,
+                    "score_breakdown": {
+                        "core_skills": 27.6,
+                        "market_relevance": 17.7,
+                        "leadership_impact": 36.0,
+                        "resume_quality": 71.9,
+                        "certifications": 25,
+                        "differentiation": 100
+                    },
+                    "market_positioning": {
+                        "tier": "Developing",
+                        "market_readiness": "Nearly Ready",
+                        "recommendation": "Consider for junior roles or internship programs"
+                    },
+                    "strengths": [
+                        "Strong AI/ML expertise (42.1%)",
+                        "Demonstrated leadership experience (3 indicators)",
+                        "Good technical depth and terminology"
+                    ],
+                    "competitive_advantages": [
+                        "Unique skills that differentiate from other candidates",
+                        "Strong alignment with current market trends"
+                    ],
+                    "experience_years": "2-3",
+                    "education": "Master's in Computer Science"
+                },
+                {
+                    "rank": 2,
+                    "candidate_name": "fullstack",
+                    "overall_score": 40.0,
+                    "score_breakdown": {
+                        "core_skills": 27.6,
+                        "market_relevance": 24.1,
+                        "leadership_impact": 0.0,
+                        "resume_quality": 71.7,
+                        "certifications": 25,
+                        "differentiation": 100
+                    },
+                    "market_positioning": {
+                        "tier": "Developing",
+                        "market_readiness": "Market Ready",
+                        "recommendation": "Consider for junior roles or internship programs"
+                    },
+                    "strengths": [
+                        "Strong Cloud/DevOps expertise (38.5%)",
+                        "Good technical depth and terminology",
+                        "Full-stack development experience"
+                    ],
+                    "competitive_advantages": [
+                        "Strong alignment with current market trends",
+                        "Versatile technology stack"
+                    ],
+                    "experience_years": "1-2",
+                    "education": "Bachelor's in Software Engineering"
+                },
+                {
+                    "rank": 3,
+                    "candidate_name": "java_resume",
+                    "overall_score": 40.0,
+                    "score_breakdown": {
+                        "core_skills": 28.7,
+                        "market_relevance": 20.3,
+                        "leadership_impact": 24.0,
+                        "resume_quality": 67.6,
+                        "certifications": 0,
+                        "differentiation": 100
+                    },
+                    "market_positioning": {
+                        "tier": "Developing",
+                        "market_readiness": "Nearly Ready",
+                        "recommendation": "Consider for junior roles or internship programs"
+                    },
+                    "strengths": [
+                        "Strong Cloud/DevOps expertise (38.5%)",
+                        "Strong action-oriented language",
+                        "Java programming expertise"
+                    ],
+                    "competitive_advantages": [
+                        "Strong alignment with current market trends",
+                        "Enterprise development background"
+                    ],
+                    "experience_years": "2+",
+                    "education": "Bachelor's in Computer Science"
+                }
+            ],
+            "statistics": {
+                "score_distribution": {
+                    "excellent_80_plus": 0,
+                    "good_60_to_79": 0,
+                    "fair_40_to_59": 3,
+                    "poor_below_40": 4
+                },
+                "average_score": 37.2,
+                "median_score": 36.2
+            },
+            "market_gaps": [
+                "Generative AI applications",
+                "Vector databases", 
+                "Time series analysis"
+            ]
+        }
+        return render_template('results.html', results=sample_data)
+    except Exception as e:
+        print(f"Results page error: {e}")
+        # Return empty results page
         return render_template('results.html', results=None)
 
 @app.route('/api/sample-analysis')
@@ -186,8 +408,10 @@ def sample_analysis():
     """Return sample analysis data for demo"""
     sample_data = {
         "job_description_file": "AI Engineer - Job Description.pdf",
+        "job_title": "AI Engineer - Machine Learning",
         "processing_timestamp": datetime.now().isoformat(),
         "total_candidates": 7,
+        "processing_time": "1.8 minutes",
         "processing_errors": [],
         "candidates": [
             {
@@ -208,11 +432,14 @@ def sample_analysis():
                     "recommendation": "Consider for junior roles or internship programs"
                 },
                 "strengths": [
-                    "Strong ai ml expertise (42.1%)",
-                    "Demonstrated leadership experience (3 indicators)"
+                    "Strong AI/ML expertise (42.1%)",
+                    "Demonstrated leadership experience (3 indicators)",
+                    "Good technical depth and terminology",
+                    "Strong action-oriented language"
                 ],
                 "competitive_advantages": [
-                    "Unique skills that differentiate from other candidates"
+                    "Unique skills that differentiate from other candidates",
+                    "Strong alignment with current market trends"
                 ]
             },
             {
@@ -233,11 +460,13 @@ def sample_analysis():
                     "recommendation": "Consider for junior roles or internship programs"
                 },
                 "strengths": [
-                    "Strong cloud devops expertise (38.5%)",
-                    "Good technical depth and terminology"
+                    "Strong Cloud/DevOps expertise (38.5%)",
+                    "Good technical depth and terminology",
+                    "Full-stack development experience"
                 ],
                 "competitive_advantages": [
-                    "Strong alignment with current market trends"
+                    "Strong alignment with current market trends",
+                    "Versatile technology stack"
                 ]
             },
             {
@@ -258,11 +487,13 @@ def sample_analysis():
                     "recommendation": "Consider for junior roles or internship programs"
                 },
                 "strengths": [
-                    "Strong cloud devops expertise (38.5%)",
-                    "Strong action-oriented language"
+                    "Strong Cloud/DevOps expertise (38.5%)",
+                    "Strong action-oriented language",
+                    "Java programming expertise"
                 ],
                 "competitive_advantages": [
-                    "Strong alignment with current market trends"
+                    "Strong alignment with current market trends",
+                    "Enterprise development background"
                 ]
             }
         ],
@@ -275,7 +506,12 @@ def sample_analysis():
             },
             "average_score": 37.2,
             "median_score": 36.2
-        }
+        },
+        "market_gaps": [
+            "Generative AI applications",
+            "Vector databases", 
+            "Time series analysis"
+        ]
     }
     
     return jsonify(sample_data)
@@ -317,6 +553,14 @@ def export_candidate():
         return jsonify({'error': 'Candidate name required'}), 400
     
     return jsonify({'message': f'Individual candidate export for {candidate_name} coming soon'}), 501
+
+@app.errorhandler(404)
+def not_found_error(error):
+    return render_template('index.html'), 404
+
+@app.errorhandler(500)
+def internal_error(error):
+    return jsonify({'error': 'Internal server error. Please try again later.'}), 500
 
 if __name__ == '__main__':
     port = int(os.environ.get('PORT', 5000))
