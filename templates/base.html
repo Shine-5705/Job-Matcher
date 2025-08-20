@@ -312,6 +312,46 @@
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     
+    <!-- Page expansion prevention -->
+    <script>
+        // Prevent infinite page expansion
+        document.addEventListener('DOMContentLoaded', function() {
+            // Set maximum constraints on body and containers
+            document.body.style.maxWidth = '100vw';
+            document.body.style.overflowX = 'hidden';
+            
+            // Constrain all containers
+            const containers = document.querySelectorAll('.container, .container-fluid');
+            containers.forEach(container => {
+                container.style.maxWidth = '100vw';
+                container.style.overflowX = 'hidden';
+            });
+            
+            // Constrain all canvases and prevent chart overflow
+            const canvases = document.querySelectorAll('canvas');
+            canvases.forEach(canvas => {
+                canvas.style.maxWidth = '100%';
+                canvas.style.maxHeight = '400px';
+                canvas.parentElement.style.overflow = 'hidden';
+            });
+            
+            // Stop any potential infinite loops
+            let scrollAttempts = 0;
+            const maxScrollAttempts = 10;
+            
+            const preventInfiniteScroll = function() {
+                if (scrollAttempts > maxScrollAttempts) {
+                    console.log('Infinite scroll prevented');
+                    return;
+                }
+                scrollAttempts++;
+                setTimeout(() => { scrollAttempts = 0; }, 1000);
+            };
+            
+            window.addEventListener('scroll', preventInfiniteScroll);
+        });
+    </script>
+    
     {% block scripts %}{% endblock %}
 </body>
 </html>

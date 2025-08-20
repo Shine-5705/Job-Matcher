@@ -304,77 +304,83 @@
 
 {% block scripts %}
 <script>
-{% if results %}
-// Score Distribution Chart
-const scoreData = [
-    {{ results.statistics.score_distribution.excellent_80_plus }},
-    {{ results.statistics.score_distribution.good_60_to_79 }},
-    {{ results.statistics.score_distribution.fair_40_to_59 }},
-    {{ results.statistics.score_distribution.poor_below_40 }}
-];
+// Safely get results data
+const resultsData = {{ results|tojson if results else '{}' }};
 
-const ctx1 = document.getElementById('scoreDistributionChart').getContext('2d');
-new Chart(ctx1, {
-    type: 'bar',
-    data: {
-        labels: ['Excellent (80%+)', 'Good (60-79%)', 'Fair (40-59%)', 'Poor (<40%)'],
-        datasets: [{
-            label: 'Candidates',
-            data: scoreData,
-            backgroundColor: ['#10b981', '#2563eb', '#f59e0b', '#ef4444'],
-            borderRadius: 8,
-            borderSkipped: false
-        }]
-    },
-    options: {
-        responsive: true,
-        plugins: {
-            legend: {
-                display: false
-            }
+// Only initialize charts if we have data
+if (resultsData && resultsData.statistics) {
+    // Score Distribution Chart
+    const scoreData = [
+        resultsData.statistics.score_distribution.excellent_80_plus || 0,
+        resultsData.statistics.score_distribution.good_60_to_79 || 0,
+        resultsData.statistics.score_distribution.fair_40_to_59 || 0,
+        resultsData.statistics.score_distribution.poor_below_40 || 0
+    ];
+
+    const ctx1 = document.getElementById('scoreDistributionChart').getContext('2d');
+    new Chart(ctx1, {
+        type: 'bar',
+        data: {
+            labels: ['Excellent (80%+)', 'Good (60-79%)', 'Fair (40-59%)', 'Poor (<40%)'],
+            datasets: [{
+                label: 'Candidates',
+                data: scoreData,
+                backgroundColor: ['#10b981', '#2563eb', '#f59e0b', '#ef4444'],
+                borderRadius: 8,
+                borderSkipped: false
+            }]
         },
-        scales: {
-            y: {
-                beginAtZero: true,
-                ticks: {
-                    stepSize: 1
+        options: {
+            responsive: true,
+            plugins: {
+                legend: {
+                    display: false
+                }
+            },
+            scales: {
+                y: {
+                    beginAtZero: true,
+                    ticks: {
+                        stepSize: 1
+                    }
                 }
             }
         }
-    }
-});
+    });
 
-// Market Trend Chart
-const ctx2 = document.getElementById('marketTrendChart').getContext('2d');
-new Chart(ctx2, {
-    type: 'radar',
-    data: {
-        labels: ['AI/ML', 'Cloud/DevOps', 'Data Eng.', 'Frontend', 'Backend', 'Security'],
-        datasets: [{
-            label: 'Top Candidate',
-            data: [42, 38, 15, 20, 25, 10],
-            borderColor: '#2563eb',
-            backgroundColor: 'rgba(37, 99, 235, 0.1)',
-            pointBackgroundColor: '#2563eb'
-        }, {
-            label: 'Average',
-            data: [20, 25, 10, 15, 18, 5],
-            borderColor: '#64748b',
-            backgroundColor: 'rgba(100, 116, 139, 0.1)',
-            pointBackgroundColor: '#64748b'
-        }]
-    },
-    options: {
-        responsive: true,
-        scales: {
-            r: {
-                beginAtZero: true,
-                max: 50
+    // Market Trend Chart
+    const ctx2 = document.getElementById('marketTrendChart').getContext('2d');
+    new Chart(ctx2, {
+        type: 'radar',
+        data: {
+            labels: ['AI/ML', 'Cloud/DevOps', 'Data Eng.', 'Frontend', 'Backend', 'Security'],
+            datasets: [{
+                label: 'Top Candidate',
+                data: [42, 38, 15, 20, 25, 10],
+                borderColor: '#2563eb',
+                backgroundColor: 'rgba(37, 99, 235, 0.1)',
+                pointBackgroundColor: '#2563eb'
+            }, {
+                label: 'Average',
+                data: [20, 25, 10, 15, 18, 5],
+                borderColor: '#64748b',
+                backgroundColor: 'rgba(100, 116, 139, 0.1)',
+                pointBackgroundColor: '#64748b'
+            }]
+        },
+        options: {
+            responsive: true,
+            scales: {
+                r: {
+                    beginAtZero: true,
+                    max: 50
+                }
             }
         }
-    }
-});
-{% endif %}
+    });
+} else {
+    console.log('No results data available for charts');
+}
 
 // Show candidate details
 function showCandidateDetails(name, candidate) {
