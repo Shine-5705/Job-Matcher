@@ -1,0 +1,341 @@
+{% extends "base.html" %}
+
+{% block title %}Advanced ATS Resume Matcher - AI-Powered Screening{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="hero-section">
+    <div class="container position-relative">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <h1 class="display-4 fw-bold mb-4">
+                    AI-Powered Resume Screening for 
+                    <span class="text-warning">International Students</span>
+                </h1>
+                <p class="lead mb-4">
+                    Advanced ATS matching system designed specifically for Northbridge's international student job placement platform. 
+                    Get enterprise-grade candidate analysis with market intelligence.
+                </p>
+                <div class="d-flex gap-3 flex-wrap">
+                    <a href="{{ url_for('upload_page') }}" class="btn btn-primary btn-lg">
+                        <i class="fas fa-upload me-2"></i>Start Analysis
+                    </a>
+                    <a href="{{ url_for('demo_page') }}" class="btn btn-outline-light btn-lg">
+                        <i class="fas fa-play me-2"></i>View Demo
+                    </a>
+                </div>
+                
+                <!-- Key Stats -->
+                <div class="row mt-5">
+                    <div class="col-4">
+                        <div class="text-center">
+                            <h3 class="fw-bold">95%</h3>
+                            <small>Skill Matching Accuracy</small>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="text-center">
+                            <h3 class="fw-bold">&lt;5s</h3>
+                            <small>Per Resume Analysis</small>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="text-center">
+                            <h3 class="fw-bold">6D</h3>
+                            <small>Analysis Dimensions</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="text-center">
+                    <img src="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 500 400' fill='none'><rect width='500' height='400' fill='%23f8fafc' rx='20'/><circle cx='250' cy='150' r='60' fill='%2364748b' opacity='0.3'/><rect x='150' y='220' width='200' height='10' fill='%232563eb' rx='5'/><rect x='150' y='250' width='150' height='10' fill='%2310b981' rx='5'/><rect x='150' y='280' width='180' height='10' fill='%23f59e0b' rx='5'/><text x='250' y='340' text-anchor='middle' fill='%23374151' font-family='sans-serif' font-size='16'>AI-Powered Analysis</text></svg>" 
+                         alt="ATS Analysis" class="img-fluid" style="max-width: 400px;">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Features Section -->
+<section class="py-5">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="fw-bold mb-3">Enterprise-Grade Features</h2>
+            <p class="lead text-muted">Comprehensive analysis that competes with Workday, Lever, and Greenhouse</p>
+        </div>
+        
+        <div class="row g-4">
+            <div class="col-lg-4">
+                <div class="feature-card p-4">
+                    <div class="feature-icon" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h4 class="fw-bold mb-3">AI-Powered Matching</h4>
+                    <p class="text-muted mb-3">
+                        Advanced NLP algorithms with TF-IDF and semantic similarity for precise skill matching. 
+                        No hardcoded skills - everything extracted dynamically from job descriptions.
+                    </p>
+                    <ul class="list-unstyled text-sm">
+                        <li><i class="fas fa-check text-success me-2"></i>Semantic skill analysis</li>
+                        <li><i class="fas fa-check text-success me-2"></i>Dynamic JD parsing</li>
+                        <li><i class="fas fa-check text-success me-2"></i>Fuzzy matching algorithms</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="col-lg-4">
+                <div class="feature-card p-4">
+                    <div class="feature-icon" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h4 class="fw-bold mb-3">Market Intelligence</h4>
+                    <p class="text-muted mb-3">
+                        Real-time analysis of 2024-2025 tech trends including AI/ML, Cloud, and modern frameworks. 
+                        Understand how candidates align with current market demands.
+                    </p>
+                    <ul class="list-unstyled text-sm">
+                        <li><i class="fas fa-check text-success me-2"></i>Trending skills analysis</li>
+                        <li><i class="fas fa-check text-success me-2"></i>Market positioning</li>
+                        <li><i class="fas fa-check text-success me-2"></i>Competitive benchmarking</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="col-lg-4">
+                <div class="feature-card p-4">
+                    <div class="feature-icon" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h4 class="fw-bold mb-3">International Student Focus</h4>
+                    <p class="text-muted mb-3">
+                        Specialized features for international students including work authorization detection, 
+                        project portfolio analysis, and education matching.
+                    </p>
+                    <ul class="list-unstyled text-sm">
+                        <li><i class="fas fa-check text-success me-2"></i>OPT/CPT/H1B detection</li>
+                        <li><i class="fas fa-check text-success me-2"></i>Project-based evaluation</li>
+                        <li><i class="fas fa-check text-success me-2"></i>International degree recognition</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Scoring Algorithm Section -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <h2 class="fw-bold mb-4">6-Dimensional Scoring Algorithm</h2>
+                <p class="lead mb-4">
+                    Our advanced scoring system evaluates candidates across multiple dimensions 
+                    to provide comprehensive insights for hiring decisions.
+                </p>
+                
+                <div class="row g-3">
+                    <div class="col-6">
+                        <div class="d-flex align-items-center">
+                            <div class="progress-modern me-3" style="width: 100px;">
+                                <div class="progress-bar-modern" style="width: 25%; background: #2563eb;"></div>
+                            </div>
+                            <div>
+                                <small class="fw-bold">Core Skills (25%)</small><br>
+                                <small class="text-muted">Tech, Experience, Education</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="d-flex align-items-center">
+                            <div class="progress-modern me-3" style="width: 100px;">
+                                <div class="progress-bar-modern" style="width: 20%; background: #10b981;"></div>
+                            </div>
+                            <div>
+                                <small class="fw-bold">Market Relevance (20%)</small><br>
+                                <small class="text-muted">2024-2025 Tech Trends</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="d-flex align-items-center">
+                            <div class="progress-modern me-3" style="width: 100px;">
+                                <div class="progress-bar-modern" style="width: 15%; background: #f59e0b;"></div>
+                            </div>
+                            <div>
+                                <small class="fw-bold">Leadership (15%)</small><br>
+                                <small class="text-muted">Impact & Achievements</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="d-flex align-items-center">
+                            <div class="progress-modern me-3" style="width: 100px;">
+                                <div class="progress-bar-modern" style="width: 15%; background: #8b5cf6;"></div>
+                            </div>
+                            <div>
+                                <small class="fw-bold">Resume Quality (15%)</small><br>
+                                <small class="text-muted">Writing & Structure</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="text-center">
+                    <canvas id="scoringChart" width="300" height="300"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Sample Results Section -->
+<section class="py-5">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="fw-bold mb-3">Sample Analysis Results</h2>
+            <p class="lead text-muted">See how our AI analyzes and ranks candidates</p>
+        </div>
+        
+        <div class="row g-4">
+            <div class="col-lg-4">
+                <div class="stats-card p-4">
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <h5 class="fw-bold mb-0">Top Candidate</h5>
+                        <span class="score-badge score-fair">44.1%</span>
+                    </div>
+                    <h6 class="text-primary mb-2">lateset_shine_res</h6>
+                    <p class="text-muted small mb-3">
+                        Strong AI/ML expertise with demonstrated leadership. 
+                        Nearly market-ready with unique differentiation.
+                    </p>
+                    <div class="row text-center">
+                        <div class="col-4">
+                            <small class="text-muted">Market</small><br>
+                            <strong class="text-success">17.7%</strong>
+                        </div>
+                        <div class="col-4">
+                            <small class="text-muted">Quality</small><br>
+                            <strong class="text-primary">71.9%</strong>
+                        </div>
+                        <div class="col-4">
+                            <small class="text-muted">Leadership</small><br>
+                            <strong class="text-warning">36.0%</strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-4">
+                <div class="stats-card p-4">
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <h5 class="fw-bold mb-0">Runner-up</h5>
+                        <span class="score-badge score-fair">40.0%</span>
+                    </div>
+                    <h6 class="text-primary mb-2">fullstack</h6>
+                    <p class="text-muted small mb-3">
+                        Strong Cloud/DevOps expertise. Market-ready with 
+                        excellent technical depth and modern skills.
+                    </p>
+                    <div class="row text-center">
+                        <div class="col-4">
+                            <small class="text-muted">Market</small><br>
+                            <strong class="text-success">24.1%</strong>
+                        </div>
+                        <div class="col-4">
+                            <small class="text-muted">Quality</small><br>
+                            <strong class="text-primary">71.7%</strong>
+                        </div>
+                        <div class="col-4">
+                            <small class="text-muted">Leadership</small><br>
+                            <strong class="text-muted">0.0%</strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-4">
+                <div class="stats-card p-4">
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <h5 class="fw-bold mb-0">Analysis Stats</h5>
+                        <span class="score-badge score-good">7 candidates</span>
+                    </div>
+                    <div class="mb-3">
+                        <small class="text-muted">Average Score</small><br>
+                        <strong class="h6">37.2%</strong>
+                    </div>
+                    <div class="mb-3">
+                        <small class="text-muted">Common Gap</small><br>
+                        <strong class="text-danger">Generative AI (100%)</strong>
+                    </div>
+                    <div class="mb-3">
+                        <small class="text-muted">Processing Time</small><br>
+                        <strong class="text-success">&lt; 2 minutes</strong>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="py-5 bg-primary text-white">
+    <div class="container text-center">
+        <h2 class="fw-bold mb-3">Ready to Transform Your Hiring Process?</h2>
+        <p class="lead mb-4">
+            Upload your job description and resumes to see our AI in action. 
+            Get enterprise-grade analysis in minutes, not hours.
+        </p>
+        <div class="d-flex gap-3 justify-content-center flex-wrap">
+            <a href="{{ url_for('upload_page') }}" class="btn btn-light btn-lg">
+                <i class="fas fa-rocket me-2"></i>Start Free Analysis
+            </a>
+            <a href="{{ url_for('demo_page') }}" class="btn btn-outline-light btn-lg">
+                <i class="fas fa-eye me-2"></i>View Live Demo
+            </a>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block scripts %}
+<script>
+// Scoring Algorithm Chart
+const ctx = document.getElementById('scoringChart').getContext('2d');
+new Chart(ctx, {
+    type: 'doughnut',
+    data: {
+        labels: ['Core Skills (25%)', 'Market Relevance (20%)', 'Leadership (15%)', 'Resume Quality (15%)', 'Certifications (10%)', 'Differentiation (15%)'],
+        datasets: [{
+            data: [25, 20, 15, 15, 10, 15],
+            backgroundColor: [
+                '#2563eb',
+                '#10b981',
+                '#f59e0b',
+                '#8b5cf6',
+                '#ef4444',
+                '#06b6d4'
+            ],
+            borderWidth: 0
+        }]
+    },
+    options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+            legend: {
+                position: 'bottom',
+                labels: {
+                    usePointStyle: true,
+                    padding: 20,
+                    font: {
+                        size: 12
+                    }
+                }
+            }
+        }
+    }
+});
+</script>
+{% endblock %}

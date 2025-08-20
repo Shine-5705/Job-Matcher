@@ -1,0 +1,474 @@
+{% extends "base.html" %}
+
+{% block title %}Live Demo - ATS Resume Matcher{% endblock %}
+
+{% block content %}
+<div class="container py-5">
+    <div class="text-center mb-5">
+        <h1 class="fw-bold mb-3">Live Demo</h1>
+        <p class="lead text-muted">
+            See our AI-powered ATS system in action with real analysis results
+        </p>
+    </div>
+
+    {% if results %}
+    <!-- Analysis Summary -->
+    <div class="row g-4 mb-5">
+        <div class="col-lg-3 col-md-6">
+            <div class="stats-card p-4 text-center">
+                <h3 class="text-primary fw-bold">{{ results.total_candidates }}</h3>
+                <p class="text-muted mb-0">Candidates Analyzed</p>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+            <div class="stats-card p-4 text-center">
+                <h3 class="text-success fw-bold">{{ "%.1f"|format(results.statistics.average_score) }}%</h3>
+                <p class="text-muted mb-0">Average Score</p>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+            <div class="stats-card p-4 text-center">
+                <h3 class="text-warning fw-bold">{{ results.candidates[0].overall_score }}%</h3>
+                <p class="text-muted mb-0">Top Score</p>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+            <div class="stats-card p-4 text-center">
+                <h3 class="text-info fw-bold">&lt;2min</h3>
+                <p class="text-muted mb-0">Processing Time</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Score Distribution Chart -->
+    <div class="row mb-5">
+        <div class="col-lg-8">
+            <div class="card shadow-sm">
+                <div class="card-header bg-white">
+                    <h5 class="fw-bold mb-0">
+                        <i class="fas fa-chart-bar text-primary me-2"></i>Candidate Score Distribution
+                    </h5>
+                </div>
+                <div class="card-body">
+                    <canvas id="scoreDistributionChart" height="100"></canvas>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <div class="card shadow-sm h-100">
+                <div class="card-header bg-white">
+                    <h6 class="fw-bold mb-0">Score Categories</h6>
+                </div>
+                <div class="card-body">
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <span class="d-flex align-items-center">
+                            <span class="score-badge score-excellent me-2">80%+</span>
+                            Excellent
+                        </span>
+                        <strong>{{ results.statistics.score_distribution.excellent_80_plus }}</strong>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <span class="d-flex align-items-center">
+                            <span class="score-badge score-good me-2">60-79%</span>
+                            Good
+                        </span>
+                        <strong>{{ results.statistics.score_distribution.good_60_to_79 }}</strong>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <span class="d-flex align-items-center">
+                            <span class="score-badge score-fair me-2">40-59%</span>
+                            Fair
+                        </span>
+                        <strong>{{ results.statistics.score_distribution.fair_40_to_59 }}</strong>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <span class="d-flex align-items-center">
+                            <span class="score-badge score-poor me-2">&lt;40%</span>
+                            Poor
+                        </span>
+                        <strong>{{ results.statistics.score_distribution.poor_below_40 }}</strong>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Top Candidates -->
+    <div class="card shadow-sm mb-5">
+        <div class="card-header bg-white">
+            <h5 class="fw-bold mb-0">
+                <i class="fas fa-trophy text-warning me-2"></i>Top Candidates Ranking
+            </h5>
+        </div>
+        <div class="card-body p-0">
+            <div class="table-responsive">
+                <table class="table table-modern mb-0">
+                    <thead>
+                        <tr>
+                            <th>Rank</th>
+                            <th>Candidate</th>
+                            <th>Overall Score</th>
+                            <th>Market Tier</th>
+                            <th>Core Skills</th>
+                            <th>Market Relevance</th>
+                            <th>Leadership</th>
+                            <th>Quality</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for candidate in results.candidates[:5] %}
+                        <tr class="candidate-row">
+                            <td>
+                                <span class="fw-bold">{{ candidate.rank }}</span>
+                                {% if candidate.rank == 1 %}
+                                    <i class="fas fa-crown text-warning ms-1"></i>
+                                {% endif %}
+                            </td>
+                            <td>
+                                <div>
+                                    <strong>{{ candidate.candidate_name }}</strong><br>
+                                    <small class="text-muted">
+                                        {% if candidate.market_positioning %}
+                                            {{ candidate.market_positioning.market_readiness }}
+                                        {% else %}
+                                            Assessment Complete
+                                        {% endif %}
+                                    </small>
+                                </div>
+                            </td>
+                            <td>
+                                <span class="score-badge 
+                                    {% if candidate.overall_score >= 80 %}score-excellent
+                                    {% elif candidate.overall_score >= 60 %}score-good
+                                    {% elif candidate.overall_score >= 40 %}score-fair
+                                    {% else %}score-poor{% endif %}">
+                                    {{ candidate.overall_score }}%
+                                </span>
+                            </td>
+                            <td>
+                                <span class="badge bg-secondary">
+                                    {% if candidate.market_positioning %}
+                                        {{ candidate.market_positioning.tier }}
+                                    {% else %}
+                                        Developing
+                                    {% endif %}
+                                </span>
+                            </td>
+                            <td>
+                                <small class="text-muted">
+                                    {{ "%.1f"|format(candidate.score_breakdown.core_skills) }}%
+                                </small>
+                            </td>
+                            <td>
+                                <small class="text-success">
+                                    {{ "%.1f"|format(candidate.score_breakdown.market_relevance) }}%
+                                </small>
+                            </td>
+                            <td>
+                                <small class="text-warning">
+                                    {{ "%.1f"|format(candidate.score_breakdown.leadership_impact) }}%
+                                </small>
+                            </td>
+                            <td>
+                                <small class="text-info">
+                                    {{ "%.1f"|format(candidate.score_breakdown.resume_quality) }}%
+                                </small>
+                            </td>
+                            <td>
+                                <button class="btn btn-sm btn-outline-primary" 
+                                        onclick="showCandidateDetails('{{ candidate.candidate_name }}', {{ candidate|tojson }})">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                            </td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- Market Analysis -->
+    <div class="row g-4 mb-5">
+        <div class="col-lg-6">
+            <div class="card shadow-sm h-100">
+                <div class="card-header bg-white">
+                    <h6 class="fw-bold mb-0">
+                        <i class="fas fa-chart-line text-success me-2"></i>Market Trend Analysis
+                    </h6>
+                </div>
+                <div class="card-body">
+                    <canvas id="marketTrendChart" height="150"></canvas>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <div class="card shadow-sm h-100">
+                <div class="card-header bg-white">
+                    <h6 class="fw-bold mb-0">
+                        <i class="fas fa-exclamation-triangle text-warning me-2"></i>Common Skill Gaps
+                    </h6>
+                </div>
+                <div class="card-body">
+                    <div class="mb-3">
+                        <div class="d-flex justify-content-between mb-1">
+                            <small>Generative AI applications</small>
+                            <small class="text-danger">100%</small>
+                        </div>
+                        <div class="progress-modern">
+                            <div class="progress-bar-modern" style="width: 100%; background: #ef4444;"></div>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <div class="d-flex justify-content-between mb-1">
+                            <small>Vector databases</small>
+                            <small class="text-danger">100%</small>
+                        </div>
+                        <div class="progress-modern">
+                            <div class="progress-bar-modern" style="width: 100%; background: #ef4444;"></div>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <div class="d-flex justify-content-between mb-1">
+                            <small>Time series analysis</small>
+                            <small class="text-warning">85%</small>
+                        </div>
+                        <div class="progress-modern">
+                            <div class="progress-bar-modern" style="width: 85%; background: #f59e0b;"></div>
+                        </div>
+                    </div>
+                    <div class="alert alert-info mt-3">
+                        <small>
+                            <i class="fas fa-lightbulb me-1"></i>
+                            <strong>Insight:</strong> All candidates would benefit from AI/ML upskilling
+                        </small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {% else %}
+    <!-- No Results State -->
+    <div class="text-center py-5">
+        <i class="fas fa-chart-bar fa-4x text-muted mb-4"></i>
+        <h3 class="text-muted mb-3">No Demo Data Available</h3>
+        <p class="lead text-muted mb-4">
+            Run an analysis first to see live demo results here
+        </p>
+        <a href="{{ url_for('upload_page') }}" class="btn btn-primary btn-lg">
+            <i class="fas fa-upload me-2"></i>Upload & Analyze
+        </a>
+    </div>
+    {% endif %}
+
+    <!-- Call to Action -->
+    <div class="text-center py-5">
+        <h3 class="fw-bold mb-3">Ready to Try It Yourself?</h3>
+        <p class="lead text-muted mb-4">
+            Upload your own job description and resumes to get personalized analysis
+        </p>
+        <a href="{{ url_for('upload_page') }}" class="btn btn-primary btn-lg me-3">
+            <i class="fas fa-rocket me-2"></i>Start Analysis
+        </a>
+        <button class="btn btn-outline-primary btn-lg" onclick="loadSampleData()">
+            <i class="fas fa-refresh me-2"></i>Load Sample Data
+        </button>
+    </div>
+</div>
+
+<!-- Candidate Details Modal -->
+<div class="modal fade" id="candidateModal" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title fw-bold">
+                    <i class="fas fa-user me-2"></i>Candidate Analysis
+                </h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body" id="candidateModalBody">
+                <!-- Content will be populated by JavaScript -->
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">
+                    <i class="fas fa-calendar me-2"></i>Schedule Interview
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+{% if results %}
+// Score Distribution Chart
+const scoreData = [
+    {{ results.statistics.score_distribution.excellent_80_plus }},
+    {{ results.statistics.score_distribution.good_60_to_79 }},
+    {{ results.statistics.score_distribution.fair_40_to_59 }},
+    {{ results.statistics.score_distribution.poor_below_40 }}
+];
+
+const ctx1 = document.getElementById('scoreDistributionChart').getContext('2d');
+new Chart(ctx1, {
+    type: 'bar',
+    data: {
+        labels: ['Excellent (80%+)', 'Good (60-79%)', 'Fair (40-59%)', 'Poor (<40%)'],
+        datasets: [{
+            label: 'Candidates',
+            data: scoreData,
+            backgroundColor: ['#10b981', '#2563eb', '#f59e0b', '#ef4444'],
+            borderRadius: 8,
+            borderSkipped: false
+        }]
+    },
+    options: {
+        responsive: true,
+        plugins: {
+            legend: {
+                display: false
+            }
+        },
+        scales: {
+            y: {
+                beginAtZero: true,
+                ticks: {
+                    stepSize: 1
+                }
+            }
+        }
+    }
+});
+
+// Market Trend Chart
+const ctx2 = document.getElementById('marketTrendChart').getContext('2d');
+new Chart(ctx2, {
+    type: 'radar',
+    data: {
+        labels: ['AI/ML', 'Cloud/DevOps', 'Data Eng.', 'Frontend', 'Backend', 'Security'],
+        datasets: [{
+            label: 'Top Candidate',
+            data: [42, 38, 15, 20, 25, 10],
+            borderColor: '#2563eb',
+            backgroundColor: 'rgba(37, 99, 235, 0.1)',
+            pointBackgroundColor: '#2563eb'
+        }, {
+            label: 'Average',
+            data: [20, 25, 10, 15, 18, 5],
+            borderColor: '#64748b',
+            backgroundColor: 'rgba(100, 116, 139, 0.1)',
+            pointBackgroundColor: '#64748b'
+        }]
+    },
+    options: {
+        responsive: true,
+        scales: {
+            r: {
+                beginAtZero: true,
+                max: 50
+            }
+        }
+    }
+});
+{% endif %}
+
+// Show candidate details
+function showCandidateDetails(name, candidate) {
+    const modalBody = document.getElementById('candidateModalBody');
+    
+    const strengthsList = candidate.strengths ? candidate.strengths.map(s => `<li>${s}</li>`).join('') : '<li>No specific strengths identified</li>';
+    const advantagesList = candidate.competitive_advantages ? candidate.competitive_advantages.map(a => `<li>${a}</li>`).join('') : '<li>Standard profile</li>';
+    
+    modalBody.innerHTML = `
+        <div class="row g-4">
+            <div class="col-md-6">
+                <h6 class="fw-bold mb-3">Overall Assessment</h6>
+                <div class="mb-3">
+                    <div class="d-flex justify-content-between mb-1">
+                        <small>Overall Score</small>
+                        <small class="fw-bold">${candidate.overall_score}%</small>
+                    </div>
+                    <div class="progress-modern">
+                        <div class="progress-bar-modern" style="width: ${candidate.overall_score}%; background: #2563eb;"></div>
+                    </div>
+                </div>
+                
+                <div class="mb-3">
+                    <strong>Market Tier:</strong> 
+                    <span class="badge bg-secondary ms-2">${candidate.market_positioning?.tier || 'Developing'}</span>
+                </div>
+                
+                <div class="mb-3">
+                    <strong>Market Readiness:</strong><br>
+                    <small class="text-muted">${candidate.market_positioning?.market_readiness || 'Assessment Pending'}</small>
+                </div>
+            </div>
+            
+            <div class="col-md-6">
+                <h6 class="fw-bold mb-3">Score Breakdown</h6>
+                <div class="mb-2">
+                    <div class="d-flex justify-content-between">
+                        <small>Core Skills</small>
+                        <small>${candidate.score_breakdown.core_skills.toFixed(1)}%</small>
+                    </div>
+                </div>
+                <div class="mb-2">
+                    <div class="d-flex justify-content-between">
+                        <small>Market Relevance</small>
+                        <small>${candidate.score_breakdown.market_relevance.toFixed(1)}%</small>
+                    </div>
+                </div>
+                <div class="mb-2">
+                    <div class="d-flex justify-content-between">
+                        <small>Leadership Impact</small>
+                        <small>${candidate.score_breakdown.leadership_impact.toFixed(1)}%</small>
+                    </div>
+                </div>
+                <div class="mb-2">
+                    <div class="d-flex justify-content-between">
+                        <small>Resume Quality</small>
+                        <small>${candidate.score_breakdown.resume_quality.toFixed(1)}%</small>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-12">
+                <h6 class="fw-bold mb-3">Key Strengths</h6>
+                <ul class="text-sm">${strengthsList}</ul>
+            </div>
+            
+            <div class="col-12">
+                <h6 class="fw-bold mb-3">Competitive Advantages</h6>
+                <ul class="text-sm">${advantagesList}</ul>
+            </div>
+            
+            <div class="col-12">
+                <h6 class="fw-bold mb-3">Recommendation</h6>
+                <div class="alert alert-info">
+                    ${candidate.market_positioning?.recommendation || 'Further assessment recommended'}
+                </div>
+            </div>
+        </div>
+    `;
+    
+    new bootstrap.Modal(document.getElementById('candidateModal')).show();
+}
+
+// Load sample data
+function loadSampleData() {
+    fetch('/api/sample-analysis')
+        .then(response => response.json())
+        .then(data => {
+            // Reload page with sample data
+            location.reload();
+        })
+        .catch(error => {
+            console.error('Error loading sample data:', error);
+        });
+}
+</script>
+{% endblock %}

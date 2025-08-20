@@ -1,0 +1,657 @@
+{% extends "base.html" %}
+
+{% block title %}Analysis Results - ATS Resume Matcher{% endblock %}
+
+{% block content %}
+<div class="container py-5">
+    <!-- Results Header -->
+    <div class="text-center mb-5">
+        <h1 class="fw-bold mb-3">Analysis Complete</h1>
+        <p class="lead text-muted">
+            AI-powered analysis results for {{ results.job_title or "Your Job Position" }}
+        </p>
+        <div class="row g-3 justify-content-center">
+            <div class="col-auto">
+                <span class="badge bg-success fs-6 py-2 px-3">
+                    <i class="fas fa-check-circle me-2"></i>{{ results.total_candidates }} Candidates Analyzed
+                </span>
+            </div>
+            <div class="col-auto">
+                <span class="badge bg-info fs-6 py-2 px-3">
+                    <i class="fas fa-clock me-2"></i>{{ results.processing_time or "< 2 minutes" }}
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Quick Actions -->
+    <div class="row mb-5">
+        <div class="col-12">
+            <div class="d-flex justify-content-center gap-3">
+                <button class="btn btn-primary" onclick="downloadReport()">
+                    <i class="fas fa-download me-2"></i>Download Report
+                </button>
+                <button class="btn btn-outline-primary" onclick="shareResults()">
+                    <i class="fas fa-share-alt me-2"></i>Share Results
+                </button>
+                <a href="{{ url_for('upload_page') }}" class="btn btn-outline-secondary">
+                    <i class="fas fa-plus me-2"></i>New Analysis
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Key Insights Dashboard -->
+    <div class="row g-4 mb-5">
+        <div class="col-lg-3 col-md-6">
+            <div class="stats-card p-4 text-center">
+                <div class="icon-wrapper mb-3">
+                    <i class="fas fa-trophy text-warning"></i>
+                </div>
+                <h3 class="text-primary fw-bold">{{ results.candidates[0].overall_score }}%</h3>
+                <p class="text-muted mb-0">Top Candidate Score</p>
+                <small class="text-success">{{ results.candidates[0].candidate_name }}</small>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+            <div class="stats-card p-4 text-center">
+                <div class="icon-wrapper mb-3">
+                    <i class="fas fa-chart-line text-success"></i>
+                </div>
+                <h3 class="text-success fw-bold">{{ "%.1f"|format(results.statistics.average_score) }}%</h3>
+                <p class="text-muted mb-0">Average Score</p>
+                <small class="text-muted">Across all candidates</small>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+            <div class="stats-card p-4 text-center">
+                <div class="icon-wrapper mb-3">
+                    <i class="fas fa-users text-info"></i>
+                </div>
+                <h3 class="text-info fw-bold">{{ results.statistics.score_distribution.excellent_80_plus }}</h3>
+                <p class="text-muted mb-0">Excellent Candidates</p>
+                <small class="text-muted">Score 80%+</small>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+            <div class="stats-card p-4 text-center">
+                <div class="icon-wrapper mb-3">
+                    <i class="fas fa-exclamation-triangle text-warning"></i>
+                </div>
+                <h3 class="text-warning fw-bold">{{ results.market_gaps|length or 3 }}</h3>
+                <p class="text-muted mb-0">Skill Gaps Found</p>
+                <small class="text-muted">Critical areas</small>
+            </div>
+        </div>
+    </div>
+
+    <!-- Top Candidates Section -->
+    <div class="card shadow-sm mb-5">
+        <div class="card-header bg-white border-bottom">
+            <div class="d-flex justify-content-between align-items-center">
+                <h5 class="fw-bold mb-0">
+                    <i class="fas fa-medal text-warning me-2"></i>Ranked Candidates
+                </h5>
+                <div class="dropdown">
+                    <button class="btn btn-outline-secondary btn-sm dropdown-toggle" type="button" id="sortDropdown" data-bs-toggle="dropdown">
+                        <i class="fas fa-sort me-2"></i>Sort by Score
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#" onclick="sortCandidates('overall')">Overall Score</a></li>
+                        <li><a class="dropdown-item" href="#" onclick="sortCandidates('skills')">Core Skills</a></li>
+                        <li><a class="dropdown-item" href="#" onclick="sortCandidates('market')">Market Relevance</a></li>
+                        <li><a class="dropdown-item" href="#" onclick="sortCandidates('leadership')">Leadership</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="card-body p-0">
+            <div class="table-responsive">
+                <table class="table table-modern mb-0" id="candidatesTable">
+                    <thead>
+                        <tr>
+                            <th style="width: 60px;">#</th>
+                            <th style="min-width: 200px;">Candidate</th>
+                            <th style="width: 120px;">Overall</th>
+                            <th style="width: 100px;">Skills</th>
+                            <th style="width: 100px;">Market</th>
+                            <th style="width: 100px;">Leadership</th>
+                            <th style="width: 100px;">Quality</th>
+                            <th style="width: 150px;">Market Tier</th>
+                            <th style="width: 120px;">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for candidate in results.candidates %}
+                        <tr class="candidate-row" data-candidate="{{ candidate|tojson|e }}">
+                            <td class="text-center">
+                                <div class="rank-badge rank-{{ candidate.rank }}">
+                                    {{ candidate.rank }}
+                                    {% if candidate.rank <= 3 %}
+                                        <i class="fas fa-star"></i>
+                                    {% endif %}
+                                </div>
+                            </td>
+                            <td>
+                                <div class="candidate-info">
+                                    <div class="candidate-name fw-bold">{{ candidate.candidate_name }}</div>
+                                    <div class="candidate-meta text-muted small">
+                                        {% if candidate.experience_years %}
+                                            {{ candidate.experience_years }} years experience
+                                        {% endif %}
+                                        {% if candidate.education %}
+                                            • {{ candidate.education }}
+                                        {% endif %}
+                                    </div>
+                                    {% if candidate.competitive_advantages %}
+                                    <div class="candidate-highlights mt-1">
+                                        {% for advantage in candidate.competitive_advantages[:2] %}
+                                        <span class="badge bg-light text-dark me-1">{{ advantage }}</span>
+                                        {% endfor %}
+                                    </div>
+                                    {% endif %}
+                                </div>
+                            </td>
+                            <td>
+                                <div class="score-display">
+                                    <span class="score-badge 
+                                        {% if candidate.overall_score >= 80 %}score-excellent
+                                        {% elif candidate.overall_score >= 60 %}score-good
+                                        {% elif candidate.overall_score >= 40 %}score-fair
+                                        {% else %}score-poor{% endif %}">
+                                        {{ candidate.overall_score }}%
+                                    </span>
+                                    <div class="score-bar">
+                                        <div class="score-progress" style="width: {{ candidate.overall_score }}%"></div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <span class="mini-score">{{ "%.0f"|format(candidate.score_breakdown.core_skills) }}%</span>
+                            </td>
+                            <td>
+                                <span class="mini-score text-success">{{ "%.0f"|format(candidate.score_breakdown.market_relevance) }}%</span>
+                            </td>
+                            <td>
+                                <span class="mini-score text-warning">{{ "%.0f"|format(candidate.score_breakdown.leadership_impact) }}%</span>
+                            </td>
+                            <td>
+                                <span class="mini-score text-info">{{ "%.0f"|format(candidate.score_breakdown.resume_quality) }}%</span>
+                            </td>
+                            <td>
+                                <span class="tier-badge tier-{{ candidate.market_positioning.tier.lower().replace(' ', '-') if candidate.market_positioning else 'developing' }}">
+                                    {{ candidate.market_positioning.tier if candidate.market_positioning else 'Developing' }}
+                                </span>
+                            </td>
+                            <td>
+                                <div class="action-buttons">
+                                    <button class="btn btn-sm btn-outline-primary me-1" 
+                                            onclick="viewDetails('{{ candidate.candidate_name }}')"
+                                            title="View Details">
+                                        <i class="fas fa-eye"></i>
+                                    </button>
+                                    <button class="btn btn-sm btn-outline-success" 
+                                            onclick="scheduleInterview('{{ candidate.candidate_name }}')"
+                                            title="Schedule Interview">
+                                        <i class="fas fa-calendar"></i>
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- Analytics Section -->
+    <div class="row g-4 mb-5">
+        <!-- Score Distribution -->
+        <div class="col-lg-6">
+            <div class="card shadow-sm h-100">
+                <div class="card-header bg-white">
+                    <h6 class="fw-bold mb-0">
+                        <i class="fas fa-chart-pie text-primary me-2"></i>Score Distribution
+                    </h6>
+                </div>
+                <div class="card-body">
+                    <canvas id="scoreChart" height="200"></canvas>
+                    <div class="score-legend mt-3">
+                        <div class="row text-center">
+                            <div class="col-3">
+                                <div class="legend-item">
+                                    <div class="legend-color bg-success"></div>
+                                    <small>Excellent</small>
+                                    <div class="fw-bold">{{ results.statistics.score_distribution.excellent_80_plus }}</div>
+                                </div>
+                            </div>
+                            <div class="col-3">
+                                <div class="legend-item">
+                                    <div class="legend-color bg-primary"></div>
+                                    <small>Good</small>
+                                    <div class="fw-bold">{{ results.statistics.score_distribution.good_60_to_79 }}</div>
+                                </div>
+                            </div>
+                            <div class="col-3">
+                                <div class="legend-item">
+                                    <div class="legend-color bg-warning"></div>
+                                    <small>Fair</small>
+                                    <div class="fw-bold">{{ results.statistics.score_distribution.fair_40_to_59 }}</div>
+                                </div>
+                            </div>
+                            <div class="col-3">
+                                <div class="legend-item">
+                                    <div class="legend-color bg-danger"></div>
+                                    <small>Poor</small>
+                                    <div class="fw-bold">{{ results.statistics.score_distribution.poor_below_40 }}</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Skills Analysis -->
+        <div class="col-lg-6">
+            <div class="card shadow-sm h-100">
+                <div class="card-header bg-white">
+                    <h6 class="fw-bold mb-0">
+                        <i class="fas fa-cogs text-success me-2"></i>Skills Market Analysis
+                    </h6>
+                </div>
+                <div class="card-body">
+                    <canvas id="skillsChart" height="200"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Market Intelligence -->
+    <div class="card shadow-sm mb-5">
+        <div class="card-header bg-white">
+            <h5 class="fw-bold mb-0">
+                <i class="fas fa-brain text-purple me-2"></i>AI-Powered Market Intelligence
+            </h5>
+        </div>
+        <div class="card-body">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <h6 class="fw-bold text-success mb-3">
+                        <i class="fas fa-arrow-up me-2"></i>Trending Skills (2024-2025)
+                    </h6>
+                    <div class="skill-list">
+                        {% set trending_skills = [
+                            "Generative AI applications", "Vector databases", "LLM fine-tuning",
+                            "Kubernetes orchestration", "MLOps pipelines", "Edge computing"
+                        ] %}
+                        {% for skill in trending_skills %}
+                        <div class="skill-item trending">
+                            <span class="skill-name">{{ skill }}</span>
+                            <span class="skill-trend text-success">
+                                <i class="fas fa-chart-line"></i> Hot
+                            </span>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+                
+                <div class="col-lg-4">
+                    <h6 class="fw-bold text-warning mb-3">
+                        <i class="fas fa-exclamation-triangle me-2"></i>Critical Gaps
+                    </h6>
+                    <div class="gap-analysis">
+                        {% set skill_gaps = [
+                            {"skill": "Generative AI", "gap": 100},
+                            {"skill": "Vector DBs", "gap": 100},
+                            {"skill": "Time Series", "gap": 85},
+                            {"skill": "MLOps", "gap": 70}
+                        ] %}
+                        {% for gap in skill_gaps %}
+                        <div class="gap-item mb-3">
+                            <div class="d-flex justify-content-between mb-1">
+                                <small class="fw-medium">{{ gap.skill }}</small>
+                                <small class="text-danger">{{ gap.gap }}% gap</small>
+                            </div>
+                            <div class="progress-modern">
+                                <div class="progress-bar-modern bg-danger" style="width: {{ gap.gap }}%"></div>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <h6 class="fw-bold text-info mb-3">
+                        <i class="fas fa-lightbulb me-2"></i>AI Recommendations
+                    </h6>
+                    <div class="recommendations">
+                        <div class="recommendation-item">
+                            <div class="rec-icon">
+                                <i class="fas fa-graduation-cap text-primary"></i>
+                            </div>
+                            <div class="rec-content">
+                                <strong>Upskilling Priority</strong>
+                                <p class="text-muted small mb-0">
+                                    All candidates would benefit from AI/ML training programs
+                                </p>
+                            </div>
+                        </div>
+                        <div class="recommendation-item">
+                            <div class="rec-icon">
+                                <i class="fas fa-users text-success"></i>
+                            </div>
+                            <div class="rec-content">
+                                <strong>Interview Strategy</strong>
+                                <p class="text-muted small mb-0">
+                                    Focus on problem-solving and adaptability for top 3 candidates
+                                </p>
+                            </div>
+                        </div>
+                        <div class="recommendation-item">
+                            <div class="rec-icon">
+                                <i class="fas fa-chart-line text-warning"></i>
+                            </div>
+                            <div class="rec-content">
+                                <strong>Market Positioning</strong>
+                                <p class="text-muted small mb-0">
+                                    Consider hybrid roles combining traditional and emerging skills
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Export Options -->
+    <div class="card shadow-sm">
+        <div class="card-header bg-white">
+            <h5 class="fw-bold mb-0">
+                <i class="fas fa-download text-primary me-2"></i>Export & Share
+            </h5>
+        </div>
+        <div class="card-body">
+            <div class="row g-3">
+                <div class="col-md-3">
+                    <button class="btn btn-outline-primary w-100" onclick="exportPDF()">
+                        <i class="fas fa-file-pdf me-2"></i>PDF Report
+                    </button>
+                </div>
+                <div class="col-md-3">
+                    <button class="btn btn-outline-success w-100" onclick="exportExcel()">
+                        <i class="fas fa-file-excel me-2"></i>Excel Data
+                    </button>
+                </div>
+                <div class="col-md-3">
+                    <button class="btn btn-outline-info w-100" onclick="exportJSON()">
+                        <i class="fas fa-code me-2"></i>JSON Data
+                    </button>
+                </div>
+                <div class="col-md-3">
+                    <button class="btn btn-outline-secondary w-100" onclick="shareLink()">
+                        <i class="fas fa-link me-2"></i>Share Link
+                    </button>
+                </div>
+            </div>
+            <div class="mt-3">
+                <small class="text-muted">
+                    <i class="fas fa-info-circle me-1"></i>
+                    Reports include detailed candidate profiles, scoring breakdowns, and market intelligence insights.
+                </small>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Candidate Details Modal -->
+<div class="modal fade" id="candidateDetailsModal" tabindex="-1">
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title fw-bold">
+                    <i class="fas fa-user-circle me-2"></i>
+                    <span id="modalCandidateName">Candidate Details</span>
+                </h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body" id="candidateDetailsBody">
+                <!-- Content populated by JavaScript -->
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-success" onclick="scheduleInterview()">
+                    <i class="fas fa-calendar-plus me-2"></i>Schedule Interview
+                </button>
+                <button type="button" class="btn btn-primary" onclick="exportCandidateReport()">
+                    <i class="fas fa-download me-2"></i>Export Profile
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+// Chart.js configurations
+const chartOptions = {
+    responsive: true,
+    maintainAspectRatio: false,
+    plugins: {
+        legend: {
+            position: 'bottom'
+        }
+    }
+};
+
+// Score Distribution Chart
+const scoreCtx = document.getElementById('scoreChart').getContext('2d');
+new Chart(scoreCtx, {
+    type: 'doughnut',
+    data: {
+        labels: ['Excellent (80%+)', 'Good (60-79%)', 'Fair (40-59%)', 'Poor (<40%)'],
+        datasets: [{
+            data: [
+                {{ results.statistics.score_distribution.excellent_80_plus }},
+                {{ results.statistics.score_distribution.good_60_to_79 }},
+                {{ results.statistics.score_distribution.fair_40_to_59 }},
+                {{ results.statistics.score_distribution.poor_below_40 }}
+            ],
+            backgroundColor: ['#10b981', '#2563eb', '#f59e0b', '#ef4444'],
+            borderWidth: 2,
+            borderColor: '#ffffff'
+        }]
+    },
+    options: chartOptions
+});
+
+// Skills Analysis Chart
+const skillsCtx = document.getElementById('skillsChart').getContext('2d');
+new Chart(skillsCtx, {
+    type: 'radar',
+    data: {
+        labels: ['AI/ML', 'Cloud/DevOps', 'Data Eng.', 'Frontend', 'Backend', 'Security'],
+        datasets: [{
+            label: 'Top Candidate',
+            data: [42, 38, 15, 20, 25, 10],
+            borderColor: '#2563eb',
+            backgroundColor: 'rgba(37, 99, 235, 0.1)',
+            pointBackgroundColor: '#2563eb',
+            pointBorderColor: '#ffffff',
+            pointBorderWidth: 2
+        }, {
+            label: 'Average',
+            data: [20, 25, 10, 15, 18, 5],
+            borderColor: '#64748b',
+            backgroundColor: 'rgba(100, 116, 139, 0.1)',
+            pointBackgroundColor: '#64748b',
+            pointBorderColor: '#ffffff',
+            pointBorderWidth: 2
+        }]
+    },
+    options: {
+        ...chartOptions,
+        scales: {
+            r: {
+                beginAtZero: true,
+                max: 50,
+                ticks: {
+                    stepSize: 10
+                }
+            }
+        }
+    }
+});
+
+// Interactive Functions
+function viewDetails(candidateName) {
+    const row = document.querySelector(`[onclick="viewDetails('${candidateName}')"]`).closest('tr');
+    const candidateData = JSON.parse(row.dataset.candidate);
+    
+    document.getElementById('modalCandidateName').textContent = candidateName;
+    
+    const modalBody = document.getElementById('candidateDetailsBody');
+    modalBody.innerHTML = generateCandidateDetailsHTML(candidateData);
+    
+    new bootstrap.Modal(document.getElementById('candidateDetailsModal')).show();
+}
+
+function generateCandidateDetailsHTML(candidate) {
+    return `
+        <div class="row g-4">
+            <div class="col-lg-4">
+                <div class="candidate-summary">
+                    <div class="text-center mb-4">
+                        <div class="candidate-avatar">
+                            <i class="fas fa-user-circle fa-4x text-muted"></i>
+                        </div>
+                        <h4 class="mt-2">${candidate.candidate_name}</h4>
+                        <span class="badge bg-primary fs-6 px-3 py-2">
+                            Rank #${candidate.rank}
+                        </span>
+                    </div>
+                    
+                    <div class="score-overview">
+                        <div class="overall-score text-center mb-3">
+                            <div class="score-circle">
+                                <span class="score-number">${candidate.overall_score}%</span>
+                            </div>
+                            <small class="text-muted">Overall Score</small>
+                        </div>
+                        
+                        <div class="score-breakdown">
+                            ${Object.entries(candidate.score_breakdown).map(([key, value]) => `
+                                <div class="d-flex justify-content-between mb-2">
+                                    <span class="text-capitalize">${key.replace('_', ' ')}</span>
+                                    <strong>${value.toFixed(1)}%</strong>
+                                </div>
+                            `).join('')}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-8">
+                <div class="candidate-details">
+                    <div class="mb-4">
+                        <h6 class="fw-bold text-primary mb-3">
+                            <i class="fas fa-star me-2"></i>Key Strengths
+                        </h6>
+                        <div class="strengths-list">
+                            ${candidate.strengths ? candidate.strengths.map(strength => `
+                                <div class="strength-item mb-2">
+                                    <i class="fas fa-check-circle text-success me-2"></i>
+                                    ${strength}
+                                </div>
+                            `).join('') : '<p class="text-muted">No specific strengths identified</p>'}
+                        </div>
+                    </div>
+                    
+                    <div class="mb-4">
+                        <h6 class="fw-bold text-success mb-3">
+                            <i class="fas fa-trophy me-2"></i>Competitive Advantages
+                        </h6>
+                        <div class="advantages-list">
+                            ${candidate.competitive_advantages ? candidate.competitive_advantages.map(advantage => `
+                                <span class="badge bg-light text-dark me-2 mb-2">${advantage}</span>
+                            `).join('') : '<p class="text-muted">Standard competitive profile</p>'}
+                        </div>
+                    </div>
+                    
+                    <div class="mb-4">
+                        <h6 class="fw-bold text-info mb-3">
+                            <i class="fas fa-chart-line me-2"></i>Market Positioning
+                        </h6>
+                        <div class="market-info">
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <small class="text-muted">Market Tier</small>
+                                    <div class="fw-bold">${candidate.market_positioning?.tier || 'Developing'}</div>
+                                </div>
+                                <div class="col-md-6">
+                                    <small class="text-muted">Market Readiness</small>
+                                    <div class="fw-bold text-success">${candidate.market_positioning?.market_readiness || 'Assessment Pending'}</div>
+                                </div>
+                            </div>
+                            <div class="mt-3">
+                                <small class="text-muted">Recommendation</small>
+                                <div class="alert alert-light mt-1">
+                                    ${candidate.market_positioning?.recommendation || 'Further assessment recommended to determine optimal positioning'}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    `;
+}
+
+function sortCandidates(criteria) {
+    // Implementation for sorting candidates table
+    console.log('Sorting by:', criteria);
+}
+
+function scheduleInterview(candidateName) {
+    alert(`Interview scheduling for ${candidateName || 'selected candidate'} - Integration with calendar system coming soon!`);
+}
+
+function downloadReport() {
+    // Generate and download comprehensive report
+    window.location.href = '/api/download-report?format=pdf';
+}
+
+function shareResults() {
+    // Generate shareable link
+    navigator.clipboard.writeText(window.location.href).then(() => {
+        alert('Results link copied to clipboard!');
+    });
+}
+
+function exportPDF() {
+    window.location.href = '/api/export?format=pdf';
+}
+
+function exportExcel() {
+    window.location.href = '/api/export?format=xlsx';
+}
+
+function exportJSON() {
+    window.location.href = '/api/export?format=json';
+}
+
+function shareLink() {
+    navigator.clipboard.writeText(window.location.href).then(() => {
+        alert('Shareable link copied to clipboard!');
+    });
+}
+
+function exportCandidateReport() {
+    const candidateName = document.getElementById('modalCandidateName').textContent;
+    window.location.href = `/api/export-candidate?name=${encodeURIComponent(candidateName)}&format=pdf`;
+}
+</script>
+{% endblock %}

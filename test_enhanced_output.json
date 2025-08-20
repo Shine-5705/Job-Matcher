@@ -1,113 +1,101 @@
 {
   "job_description_file": "AI Engineer - Job Description.pdf",
-  "processing_timestamp": "2025-08-21T03:29:08.935216",
+  "processing_timestamp": "2025-08-21T03:21:41.619615",
   "total_candidates": 7,
   "processing_errors": [],
   "job_requirements_extracted": {
     "technical_skills": {
       "matched": [
-        "openai api",
-        "huggingface transformers",
-        "langchain",
-        "pytorch",
-        "models (llms",
-        "scikit-learn",
         "such as javascript"
       ],
       "missing": [
-        "to build cutting-edge ai applications",
-        "pinecone",
-        "implementing rag workflows",
-        "to enhance performance",
-        "storage",
-        "sql",
+        "langgraph",
         "ml frameworks like tensorflow",
-        "faiss",
-        "prophet",
-        "other generative ai tools",
-        ": 1",
-        "deploying ai",
-        "developing",
-        "fine-tuning",
-        "weaviate",
-        "accuracy",
-        "similar vectordbs for document retrieval",
-        "generative ai",
-        "arima",
-        "generative ai applications",
-        "focusing on nlp",
-        "time series",
-        "other forecasting techniques",
-        "techniques",
-        "with langgraph",
-        "lstm",
         "like tensorflow",
+        "weaviate",
+        "lstm",
+        "scikit-learn",
+        "with langgraph",
+        "langchain",
+        "openai api",
+        "arima",
+        "deploying ai",
+        "focusing on nlp",
+        "implementing rag workflows",
+        "pytorch",
+        "storage",
+        "prophet",
+        "pinecone",
+        "other forecasting techniques",
+        "faiss",
+        "huggingface transformers",
+        "other generative ai tools",
         "ml models",
-        "langgraph"
+        "techniques",
+        "accuracy",
+        "generative ai applications",
+        "time series",
+        "similar vectordbs for document retrieval",
+        "developing",
+        "to enhance performance",
+        "models (llms",
+        "fine-tuning",
+        "generative ai",
+        "to build cutting-edge ai applications",
+        "sql"
       ],
       "match_details": {
-        "openai api": {
-          "type": "partial",
-          "matched_with": "NLP (OpenAI API"
-        },
-        "huggingface transformers": {
-          "type": "partial",
-          "matched_with": "Transformers"
-        },
-        "langchain": {
-          "type": "exact",
-          "matched_with": "LangChain"
-        },
-        "pytorch": {
-          "type": "exact",
-          "matched_with": "PyTorch"
-        },
-        "models (llms": {
-          "type": "partial",
-          "matched_with": "LLMs"
-        },
-        "scikit-learn": {
-          "type": "exact",
-          "matched_with": "scikit-learn"
-        },
         "such as javascript": {
           "type": "semantic",
-          "matched_with": "Javascript(Novice) •Frameworks: TensorFlow",
-          "similarity": 0.359475323926137
+          "matched_with": "Javascript(Novice) •Frameworks: React",
+          "similarity": 0.34989162821429465,
+          "priority": "general"
         }
       }
     },
     "market_analysis": {
-      "overall_market_score": 6.3,
+      "overall_market_score": 17.7,
       "category_scores": {
         "ai_ml": {
-          "score": 21.1,
+          "score": 42.1,
           "found_skills": [
+            "claude",
             "llm",
             "transformer",
             "langchain",
+            "rag",
+            "fine-tuning",
+            "prompt engineering",
             "openai"
           ],
           "total_possible": 19
         },
         "cloud_devops": {
-          "score": 0.0,
-          "found_skills": [],
+          "score": 15.4,
+          "found_skills": [
+            "kubernetes",
+            "docker"
+          ],
           "total_possible": 13
         },
         "data_engineering": {
-          "score": 0.0,
-          "found_skills": [],
+          "score": 9.1,
+          "found_skills": [
+            "postgres"
+          ],
           "total_possible": 11
         },
         "modern_frontend": {
-          "score": 0.0,
-          "found_skills": [],
+          "score": 9.1,
+          "found_skills": [
+            "react"
+          ],
           "total_possible": 11
         },
         "backend_modern": {
-          "score": 10.0,
+          "score": 20.0,
           "found_skills": [
+            "fastapi",
             "flask"
           ],
           "total_possible": 10
@@ -123,52 +111,59 @@
           "total_possible": 7
         }
       },
-      "total_trending_skills_found": 5
+      "total_trending_skills_found": 14
     },
     "leadership_analysis": {
-      "leadership_score": 20.0,
+      "leadership_score": 60.0,
       "achievement_score": 0,
       "leadership_indicators": [
-        "managed"
+        "managed",
+        "coordinated",
+        "spearheaded"
       ],
       "quantified_achievements": [],
-      "leadership_count": 1,
+      "leadership_count": 3,
       "achievement_count": 0
     },
     "quality_analysis": {
-      "overall_quality_score": 56.1,
-      "readability_score": 44.5,
-      "action_verb_score": 30.0,
-      "technical_depth_score": 50.0,
+      "overall_quality_score": 71.9,
+      "readability_score": 55.0,
+      "action_verb_score": 70.0,
+      "technical_depth_score": 62.5,
       "length_score": 100,
-      "word_count": 480,
-      "sentence_count": 16,
-      "flesch_reading_ease": 9.5,
-      "grade_level": 16.9,
-      "action_verbs_found": 3,
-      "tech_depth_indicators": 4
+      "word_count": 512,
+      "sentence_count": 17,
+      "flesch_reading_ease": 20.0,
+      "grade_level": 16.2,
+      "action_verbs_found": 7,
+      "tech_depth_indicators": 5
     },
     "certification_analysis": {
-      "certification_score": 0,
-      "valuable_certifications": [],
-      "certification_count": 0
+      "certification_score": 25,
+      "valuable_certifications": [
+        "machine learning engineer"
+      ],
+      "certification_count": 1
     },
     "differentiation_analysis": {
       "differentiation_score": 100,
       "unique_elements": [
-        "◦focused",
-        "attracting",
-        "identify",
-        "firestore",
-        "emergency",
-        "others",
-        "included",
-        "2000",
-        "registration",
-        "safest"
+        "cyber",
+        "shine",
+        "health",
+        "xgboost",
+        "peace",
+        "created",
+        "automate",
+        "precision",
+        "vitals",
+        "historical"
       ],
-      "specialized_terms": [],
-      "uniqueness_ratio": 58.0
+      "specialized_terms": [
+        "claude",
+        "fine-tuning"
+      ],
+      "uniqueness_ratio": 10.5
     },
     "experience_analysis": {
       "type_match_score": 40.0,
@@ -182,242 +177,14 @@
   },
   "candidates": [
     {
-      "candidate_name": "Academic_CV_Template",
-      "file_name": "Academic_CV_Template.pdf",
-      "overall_score": 28.1,
-      "score_breakdown": {
-        "jd_technical_match": 19.4,
-        "jd_experience_match": 40.0,
-        "jd_education_match": 50,
-        "jd_overall_match": 28.9,
-        "market_relevance": 6.3,
-        "resume_quality": 56.1,
-        "leadership_impact": 12.0,
-        "certifications": 0,
-        "differentiation": 100
-      },
-      "detailed_analysis": {
-        "technical_skills": {
-          "matched": [
-            "openai api",
-            "huggingface transformers",
-            "langchain",
-            "pytorch",
-            "models (llms",
-            "scikit-learn",
-            "such as javascript"
-          ],
-          "missing": [
-            "to build cutting-edge ai applications",
-            "pinecone",
-            "implementing rag workflows",
-            "to enhance performance",
-            "storage",
-            "sql",
-            "ml frameworks like tensorflow",
-            "faiss",
-            "prophet",
-            "other generative ai tools",
-            ": 1",
-            "deploying ai",
-            "developing",
-            "fine-tuning",
-            "weaviate",
-            "accuracy",
-            "similar vectordbs for document retrieval",
-            "generative ai",
-            "arima",
-            "generative ai applications",
-            "focusing on nlp",
-            "time series",
-            "other forecasting techniques",
-            "techniques",
-            "with langgraph",
-            "lstm",
-            "like tensorflow",
-            "ml models",
-            "langgraph"
-          ],
-          "match_details": {
-            "openai api": {
-              "type": "partial",
-              "matched_with": "NLP (OpenAI API"
-            },
-            "huggingface transformers": {
-              "type": "partial",
-              "matched_with": "Transformers"
-            },
-            "langchain": {
-              "type": "exact",
-              "matched_with": "LangChain"
-            },
-            "pytorch": {
-              "type": "exact",
-              "matched_with": "PyTorch"
-            },
-            "models (llms": {
-              "type": "partial",
-              "matched_with": "LLMs"
-            },
-            "scikit-learn": {
-              "type": "exact",
-              "matched_with": "scikit-learn"
-            },
-            "such as javascript": {
-              "type": "semantic",
-              "matched_with": "Javascript(Novice) •Frameworks: TensorFlow",
-              "similarity": 0.359475323926137
-            }
-          }
-        },
-        "market_analysis": {
-          "overall_market_score": 6.3,
-          "category_scores": {
-            "ai_ml": {
-              "score": 21.1,
-              "found_skills": [
-                "llm",
-                "transformer",
-                "langchain",
-                "openai"
-              ],
-              "total_possible": 19
-            },
-            "cloud_devops": {
-              "score": 0.0,
-              "found_skills": [],
-              "total_possible": 13
-            },
-            "data_engineering": {
-              "score": 0.0,
-              "found_skills": [],
-              "total_possible": 11
-            },
-            "modern_frontend": {
-              "score": 0.0,
-              "found_skills": [],
-              "total_possible": 11
-            },
-            "backend_modern": {
-              "score": 10.0,
-              "found_skills": [
-                "flask"
-              ],
-              "total_possible": 10
-            },
-            "security": {
-              "score": 0.0,
-              "found_skills": [],
-              "total_possible": 8
-            },
-            "blockchain_web3": {
-              "score": 0.0,
-              "found_skills": [],
-              "total_possible": 7
-            }
-          },
-          "total_trending_skills_found": 5
-        },
-        "leadership_analysis": {
-          "leadership_score": 20.0,
-          "achievement_score": 0,
-          "leadership_indicators": [
-            "managed"
-          ],
-          "quantified_achievements": [],
-          "leadership_count": 1,
-          "achievement_count": 0
-        },
-        "quality_analysis": {
-          "overall_quality_score": 56.1,
-          "readability_score": 44.5,
-          "action_verb_score": 30.0,
-          "technical_depth_score": 50.0,
-          "length_score": 100,
-          "word_count": 480,
-          "sentence_count": 16,
-          "flesch_reading_ease": 9.5,
-          "grade_level": 16.9,
-          "action_verbs_found": 3,
-          "tech_depth_indicators": 4
-        },
-        "certification_analysis": {
-          "certification_score": 0,
-          "valuable_certifications": [],
-          "certification_count": 0
-        },
-        "differentiation_analysis": {
-          "differentiation_score": 100,
-          "unique_elements": [
-            "◦focused",
-            "attracting",
-            "identify",
-            "firestore",
-            "emergency",
-            "others",
-            "included",
-            "2000",
-            "registration",
-            "safest"
-          ],
-          "specialized_terms": [],
-          "uniqueness_ratio": 58.0
-        },
-        "experience_analysis": {
-          "type_match_score": 40.0,
-          "required_years": 4,
-          "resume_years": 0,
-          "experience_entries": 1
-        },
-        "education_analysis": {
-          "message": "No specific education requirements"
-        }
-      },
-      "competitive_advantages": [
-        "Unique skills that differentiate from other candidates"
-      ],
-      "market_positioning": {
-        "tier": "Limited JD Match",
-        "description": "Entry level for this role - significant gaps in JD requirements",
-        "market_readiness": "Requires Significant Upskilling",
-        "recommendation": "DEVELOPING CANDIDATE - Significant JD gaps, recommend skill development first"
-      },
-      "strengths": [
-        "🎯 Good JD education alignment (50.0%)"
-      ],
-      "recommendations": [
-        "Priority skills to acquire: to build cutting-edge ai applications, pinecone, implementing rag workflows",
-        "Consider learning trending cloud devops technologies",
-        "Highlight leadership roles, team collaboration, or mentoring experience",
-        "Add quantifiable metrics and business impact to achievements",
-        "Use more action verbs to demonstrate impact and initiative",
-        "Improve resume clarity and professional writing style",
-        "Focus on skills that differentiate you from other candidates",
-        "Consider contributing to open source projects or building a portfolio"
-      ],
-      "extracted_info": {
-        "skills_found": 22,
-        "experience_years": 0,
-        "education_count": 1,
-        "projects_count": 9,
-        "certifications_count": 0,
-        "leadership_indicators": 1,
-        "quantified_achievements": 0
-      },
-      "rank": 1
-    },
-    {
       "candidate_name": "lateset_shine_res",
       "file_name": "lateset_shine_res.pdf",
-      "overall_score": 27.1,
+      "overall_score": 27.9,
       "score_breakdown": {
-        "jd_technical_match": 2.8,
-        "jd_experience_match": 40.0,
-        "jd_education_match": 50,
-        "jd_overall_match": 18.6,
+        "core_skills": 14.2,
         "market_relevance": 17.7,
-        "resume_quality": 71.9,
         "leadership_impact": 36.0,
+        "resume_quality": 71.9,
         "certifications": 25,
         "differentiation": 100
       },
@@ -427,47 +194,47 @@
             "such as javascript"
           ],
           "missing": [
-            "openai api",
-            "to build cutting-edge ai applications",
-            "pinecone",
-            "implementing rag workflows",
-            "to enhance performance",
-            "storage",
-            "huggingface transformers",
-            "sql",
+            "langgraph",
             "ml frameworks like tensorflow",
-            "faiss",
-            "prophet",
-            "other generative ai tools",
-            ": 1",
-            "deploying ai",
+            "like tensorflow",
+            "weaviate",
+            "lstm",
+            "scikit-learn",
+            "with langgraph",
             "langchain",
+            "openai api",
+            "arima",
+            "deploying ai",
+            "focusing on nlp",
+            "implementing rag workflows",
             "pytorch",
+            "storage",
+            "prophet",
+            "pinecone",
+            "other forecasting techniques",
+            "faiss",
+            "huggingface transformers",
+            "other generative ai tools",
+            "ml models",
+            "techniques",
+            "accuracy",
+            "generative ai applications",
+            "time series",
+            "similar vectordbs for document retrieval",
             "developing",
+            "to enhance performance",
             "models (llms",
             "fine-tuning",
-            "weaviate",
-            "accuracy",
-            "similar vectordbs for document retrieval",
             "generative ai",
-            "scikit-learn",
-            "arima",
-            "generative ai applications",
-            "focusing on nlp",
-            "time series",
-            "other forecasting techniques",
-            "techniques",
-            "with langgraph",
-            "lstm",
-            "like tensorflow",
-            "ml models",
-            "langgraph"
+            "to build cutting-edge ai applications",
+            "sql"
           ],
           "match_details": {
             "such as javascript": {
               "type": "semantic",
               "matched_with": "Javascript(Novice) •Frameworks: React",
-              "similarity": 0.35005596312872084
+              "similarity": 0.34989162821429465,
+              "priority": "general"
             }
           }
         },
@@ -566,20 +333,20 @@
         "differentiation_analysis": {
           "differentiation_score": 100,
           "unique_elements": [
-            "precision",
-            "learnign",
             "cyber",
-            "◦won",
-            "training",
-            "leading",
+            "shine",
             "health",
+            "xgboost",
             "peace",
+            "created",
             "automate",
-            "◦managed"
+            "precision",
+            "vitals",
+            "historical"
           ],
           "specialized_terms": [
-            "fine-tuning",
-            "claude"
+            "claude",
+            "fine-tuning"
           ],
           "uniqueness_ratio": 10.5
         },
@@ -597,19 +364,19 @@
         "Unique skills that differentiate from other candidates"
       ],
       "market_positioning": {
-        "tier": "Limited JD Match",
-        "description": "Entry level for this role - significant gaps in JD requirements",
-        "market_readiness": "Requires Significant Upskilling",
-        "recommendation": "NOT SUITABLE - Poor JD alignment, extensive training required"
+        "tier": "Entry Level",
+        "description": "Candidate requiring substantial development for this role",
+        "market_readiness": "Nearly Ready",
+        "recommendation": "Recommend skill development before consideration"
       },
       "strengths": [
-        "🎯 Good JD education alignment (50.0%)",
         "Strong ai ml expertise (42.1%)",
         "Demonstrated leadership experience (3 indicators)",
+        "Strong action-oriented language",
         "Good technical depth and terminology"
       ],
       "recommendations": [
-        "Priority skills to acquire: openai api, to build cutting-edge ai applications, pinecone",
+        "Priority skills to acquire: langgraph, ml frameworks like tensorflow, like tensorflow",
         "Consider learning trending security technologies",
         "Add quantifiable metrics and business impact to achievements",
         "Improve resume clarity and professional writing style",
@@ -625,73 +392,71 @@
         "leadership_indicators": 3,
         "quantified_achievements": 0
       },
-      "rank": 2
+      "rank": 1
     },
     {
       "candidate_name": "java_resume",
       "file_name": "java_resume.pdf",
-      "overall_score": 26.3,
+      "overall_score": 26.7,
       "score_breakdown": {
-        "jd_technical_match": 5.6,
-        "jd_experience_match": 40.0,
-        "jd_education_match": 50,
-        "jd_overall_match": 20.4,
+        "core_skills": 16.6,
         "market_relevance": 20.3,
-        "resume_quality": 67.6,
         "leadership_impact": 24.0,
+        "resume_quality": 67.6,
         "certifications": 0,
         "differentiation": 100
       },
       "detailed_analysis": {
         "technical_skills": {
           "matched": [
-            "sql",
-            "such as javascript"
+            "such as javascript",
+            "sql"
           ],
           "missing": [
-            "openai api",
-            "to build cutting-edge ai applications",
-            "pinecone",
-            "implementing rag workflows",
-            "to enhance performance",
-            "storage",
-            "huggingface transformers",
+            "langgraph",
             "ml frameworks like tensorflow",
-            "faiss",
-            "prophet",
-            "other generative ai tools",
-            ": 1",
-            "deploying ai",
+            "like tensorflow",
+            "weaviate",
+            "lstm",
+            "scikit-learn",
+            "with langgraph",
             "langchain",
+            "openai api",
+            "arima",
+            "deploying ai",
+            "focusing on nlp",
+            "implementing rag workflows",
             "pytorch",
+            "storage",
+            "prophet",
+            "pinecone",
+            "other forecasting techniques",
+            "faiss",
+            "huggingface transformers",
+            "other generative ai tools",
+            "ml models",
+            "techniques",
+            "accuracy",
+            "generative ai applications",
+            "time series",
+            "similar vectordbs for document retrieval",
             "developing",
+            "to enhance performance",
             "models (llms",
             "fine-tuning",
-            "weaviate",
-            "accuracy",
-            "similar vectordbs for document retrieval",
             "generative ai",
-            "scikit-learn",
-            "arima",
-            "generative ai applications",
-            "focusing on nlp",
-            "time series",
-            "other forecasting techniques",
-            "techniques",
-            "with langgraph",
-            "lstm",
-            "like tensorflow",
-            "ml models",
-            "langgraph"
+            "to build cutting-edge ai applications"
           ],
           "match_details": {
-            "sql": {
-              "type": "exact",
-              "matched_with": "SQL"
-            },
             "such as javascript": {
               "type": "partial",
-              "matched_with": "JavaScript"
+              "matched_with": "Java",
+              "priority": "general"
+            },
+            "sql": {
+              "type": "exact",
+              "matched_with": "SQL",
+              "priority": "general"
             }
           }
         },
@@ -790,22 +555,22 @@
         "differentiation_analysis": {
           "differentiation_score": 100,
           "unique_elements": [
-            "handle",
-            "boot-based",
-            "jwt-based",
-            "patient",
-            "springboot",
-            "kafka",
-            "hipaa",
-            "standards",
-            "spring",
-            "hibernate"
+            "hl7/fhir",
+            "portability",
+            "conversational",
+            "30built",
+            "embedding",
+            "css3",
+            "hibernate",
+            "boot",
+            "jenkins",
+            "platform"
           ],
           "specialized_terms": [
-            "kafka",
-            "microservices",
             "jenkins",
-            "ci/cd"
+            "microservices",
+            "ci/cd",
+            "kafka"
           ],
           "uniqueness_ratio": 19.8
         },
@@ -824,17 +589,17 @@
         "Unique skills that differentiate from other candidates"
       ],
       "market_positioning": {
-        "tier": "Limited JD Match",
-        "description": "Entry level for this role - significant gaps in JD requirements",
-        "market_readiness": "Requires Significant Upskilling",
-        "recommendation": "NOT SUITABLE - Poor JD alignment, extensive training required"
+        "tier": "Entry Level",
+        "description": "Candidate requiring substantial development for this role",
+        "market_readiness": "Nearly Ready",
+        "recommendation": "Recommend skill development before consideration"
       },
       "strengths": [
-        "🎯 Good JD education alignment (50.0%)",
-        "Strong cloud devops expertise (38.5%)"
+        "Strong cloud devops expertise (38.5%)",
+        "Strong action-oriented language"
       ],
       "recommendations": [
-        "Priority skills to acquire: openai api, to build cutting-edge ai applications, pinecone",
+        "Priority skills to acquire: langgraph, ml frameworks like tensorflow, like tensorflow",
         "Consider learning trending blockchain web3 technologies",
         "Add quantifiable metrics and business impact to achievements",
         "Improve resume clarity and professional writing style",
@@ -850,20 +615,17 @@
         "leadership_indicators": 2,
         "quantified_achievements": 0
       },
-      "rank": 3
+      "rank": 2
     },
     {
       "candidate_name": "fullstack",
       "file_name": "fullstack.pdf",
-      "overall_score": 24.9,
+      "overall_score": 25.8,
       "score_breakdown": {
-        "jd_technical_match": 2.8,
-        "jd_experience_match": 40.0,
-        "jd_education_match": 50,
-        "jd_overall_match": 18.6,
+        "core_skills": 14.2,
         "market_relevance": 24.1,
-        "resume_quality": 71.7,
         "leadership_impact": 0.0,
+        "resume_quality": 71.7,
         "certifications": 25,
         "differentiation": 100
       },
@@ -873,47 +635,47 @@
             "such as javascript"
           ],
           "missing": [
-            "openai api",
-            "to build cutting-edge ai applications",
-            "pinecone",
-            "implementing rag workflows",
-            "to enhance performance",
-            "storage",
-            "huggingface transformers",
-            "sql",
+            "langgraph",
             "ml frameworks like tensorflow",
-            "faiss",
-            "prophet",
-            "other generative ai tools",
-            ": 1",
-            "deploying ai",
+            "like tensorflow",
+            "weaviate",
+            "lstm",
+            "scikit-learn",
+            "with langgraph",
             "langchain",
+            "openai api",
+            "arima",
+            "deploying ai",
+            "focusing on nlp",
+            "implementing rag workflows",
             "pytorch",
+            "storage",
+            "prophet",
+            "pinecone",
+            "other forecasting techniques",
+            "faiss",
+            "huggingface transformers",
+            "other generative ai tools",
+            "ml models",
+            "techniques",
+            "accuracy",
+            "generative ai applications",
+            "time series",
+            "similar vectordbs for document retrieval",
             "developing",
+            "to enhance performance",
             "models (llms",
             "fine-tuning",
-            "weaviate",
-            "accuracy",
-            "similar vectordbs for document retrieval",
             "generative ai",
-            "scikit-learn",
-            "arima",
-            "generative ai applications",
-            "focusing on nlp",
-            "time series",
-            "other forecasting techniques",
-            "techniques",
-            "with langgraph",
-            "lstm",
-            "like tensorflow",
-            "ml models",
-            "langgraph"
+            "to build cutting-edge ai applications",
+            "sql"
           ],
           "match_details": {
             "such as javascript": {
               "type": "semantic",
               "matched_with": "•Programming Languages: JavaScript (TypeScript",
-              "similarity": 0.3441641470415076
+              "similarity": 0.3439368732054704,
+              "priority": "general"
             }
           }
         },
@@ -1015,15 +777,15 @@
           "differentiation_score": 100,
           "unique_elements": [
             "hosting",
-            "optimization",
-            "express.js",
-            "◦full-stack",
-            "style",
-            "contributions",
-            "infra",
-            "attendance",
             "puppeteer",
-            "scalability"
+            "contributions",
+            "optimization",
+            "jwt/oauth",
+            "kartikey",
+            "nurse",
+            "•whatstyle",
+            "browser",
+            "secret-safe"
           ],
           "specialized_terms": [],
           "uniqueness_ratio": 17.8
@@ -1043,18 +805,17 @@
         "Unique skills that differentiate from other candidates"
       ],
       "market_positioning": {
-        "tier": "Limited JD Match",
-        "description": "Entry level for this role - significant gaps in JD requirements",
-        "market_readiness": "Requires Significant Upskilling",
-        "recommendation": "NOT SUITABLE - Poor JD alignment, extensive training required"
+        "tier": "Entry Level",
+        "description": "Candidate requiring substantial development for this role",
+        "market_readiness": "Market Ready",
+        "recommendation": "Recommend skill development before consideration"
       },
       "strengths": [
-        "🎯 Good JD education alignment (50.0%)",
         "Strong cloud devops expertise (38.5%)",
         "Good technical depth and terminology"
       ],
       "recommendations": [
-        "Priority skills to acquire: openai api, to build cutting-edge ai applications, pinecone",
+        "Priority skills to acquire: langgraph, ml frameworks like tensorflow, like tensorflow",
         "Consider learning trending blockchain web3 technologies",
         "Highlight leadership roles, team collaboration, or mentoring experience",
         "Add quantifiable metrics and business impact to achievements",
@@ -1071,6 +832,232 @@
         "leadership_indicators": 0,
         "quantified_achievements": 0
       },
+      "rank": 3
+    },
+    {
+      "candidate_name": "Academic_CV_Template",
+      "file_name": "Academic_CV_Template.pdf",
+      "overall_score": 24.6,
+      "score_breakdown": {
+        "core_skills": 25.0,
+        "market_relevance": 6.3,
+        "leadership_impact": 12.0,
+        "resume_quality": 56.1,
+        "certifications": 0,
+        "differentiation": 100
+      },
+      "detailed_analysis": {
+        "technical_skills": {
+          "matched": [
+            "scikit-learn",
+            "langchain",
+            "openai api",
+            "pytorch",
+            "huggingface transformers",
+            "models (llms",
+            "such as javascript"
+          ],
+          "missing": [
+            "langgraph",
+            "ml frameworks like tensorflow",
+            "like tensorflow",
+            "weaviate",
+            "lstm",
+            "with langgraph",
+            "arima",
+            "deploying ai",
+            "focusing on nlp",
+            "implementing rag workflows",
+            "storage",
+            "prophet",
+            "pinecone",
+            "other forecasting techniques",
+            "faiss",
+            "other generative ai tools",
+            "ml models",
+            "techniques",
+            "accuracy",
+            "generative ai applications",
+            "time series",
+            "similar vectordbs for document retrieval",
+            "developing",
+            "to enhance performance",
+            "fine-tuning",
+            "generative ai",
+            "to build cutting-edge ai applications",
+            "sql"
+          ],
+          "match_details": {
+            "scikit-learn": {
+              "type": "exact",
+              "matched_with": "scikit-learn",
+              "priority": "general"
+            },
+            "langchain": {
+              "type": "exact",
+              "matched_with": "LangChain",
+              "priority": "general"
+            },
+            "openai api": {
+              "type": "partial",
+              "matched_with": "NLP (OpenAI API",
+              "priority": "general"
+            },
+            "pytorch": {
+              "type": "exact",
+              "matched_with": "PyTorch",
+              "priority": "general"
+            },
+            "huggingface transformers": {
+              "type": "partial",
+              "matched_with": "Transformers",
+              "priority": "general"
+            },
+            "models (llms": {
+              "type": "partial",
+              "matched_with": "LLMs",
+              "priority": "general"
+            },
+            "such as javascript": {
+              "type": "semantic",
+              "matched_with": "Javascript(Novice) •Frameworks: TensorFlow",
+              "similarity": 0.3593848423869008,
+              "priority": "general"
+            }
+          }
+        },
+        "market_analysis": {
+          "overall_market_score": 6.3,
+          "category_scores": {
+            "ai_ml": {
+              "score": 21.1,
+              "found_skills": [
+                "llm",
+                "transformer",
+                "langchain",
+                "openai"
+              ],
+              "total_possible": 19
+            },
+            "cloud_devops": {
+              "score": 0.0,
+              "found_skills": [],
+              "total_possible": 13
+            },
+            "data_engineering": {
+              "score": 0.0,
+              "found_skills": [],
+              "total_possible": 11
+            },
+            "modern_frontend": {
+              "score": 0.0,
+              "found_skills": [],
+              "total_possible": 11
+            },
+            "backend_modern": {
+              "score": 10.0,
+              "found_skills": [
+                "flask"
+              ],
+              "total_possible": 10
+            },
+            "security": {
+              "score": 0.0,
+              "found_skills": [],
+              "total_possible": 8
+            },
+            "blockchain_web3": {
+              "score": 0.0,
+              "found_skills": [],
+              "total_possible": 7
+            }
+          },
+          "total_trending_skills_found": 5
+        },
+        "leadership_analysis": {
+          "leadership_score": 20.0,
+          "achievement_score": 0,
+          "leadership_indicators": [
+            "managed"
+          ],
+          "quantified_achievements": [],
+          "leadership_count": 1,
+          "achievement_count": 0
+        },
+        "quality_analysis": {
+          "overall_quality_score": 56.1,
+          "readability_score": 44.5,
+          "action_verb_score": 30.0,
+          "technical_depth_score": 50.0,
+          "length_score": 100,
+          "word_count": 480,
+          "sentence_count": 16,
+          "flesch_reading_ease": 9.5,
+          "grade_level": 16.9,
+          "action_verbs_found": 3,
+          "tech_depth_indicators": 4
+        },
+        "certification_analysis": {
+          "certification_score": 0,
+          "valuable_certifications": [],
+          "certification_count": 0
+        },
+        "differentiation_analysis": {
+          "differentiation_score": 100,
+          "unique_elements": [
+            "fostering",
+            "problem-solving",
+            "alarm",
+            "engineered",
+            "codeforceseducation",
+            "swift",
+            "engagement",
+            "remind",
+            "role",
+            "functionalities"
+          ],
+          "specialized_terms": [],
+          "uniqueness_ratio": 58.0
+        },
+        "experience_analysis": {
+          "type_match_score": 40.0,
+          "required_years": 4,
+          "resume_years": 0,
+          "experience_entries": 1
+        },
+        "education_analysis": {
+          "message": "No specific education requirements"
+        }
+      },
+      "competitive_advantages": [
+        "Unique skills that differentiate from other candidates"
+      ],
+      "market_positioning": {
+        "tier": "Entry Level",
+        "description": "Candidate requiring substantial development for this role",
+        "market_readiness": "Needs Preparation",
+        "recommendation": "Recommend skill development before consideration"
+      },
+      "strengths": [],
+      "recommendations": [
+        "Priority skills to acquire: langgraph, ml frameworks like tensorflow, like tensorflow",
+        "Consider learning trending cloud devops technologies",
+        "Highlight leadership roles, team collaboration, or mentoring experience",
+        "Add quantifiable metrics and business impact to achievements",
+        "Use more action verbs to demonstrate impact and initiative",
+        "Improve resume clarity and professional writing style",
+        "Focus on skills that differentiate you from other candidates",
+        "Consider contributing to open source projects or building a portfolio"
+      ],
+      "extracted_info": {
+        "skills_found": 22,
+        "experience_years": 0,
+        "education_count": 1,
+        "projects_count": 9,
+        "certifications_count": 0,
+        "leadership_indicators": 1,
+        "quantified_achievements": 0
+      },
       "rank": 4
     },
     {
@@ -1078,13 +1065,10 @@
       "file_name": "Analyst_resume.pdf",
       "overall_score": 22.3,
       "score_breakdown": {
-        "jd_technical_match": 0.0,
-        "jd_experience_match": 40.0,
-        "jd_education_match": 50,
-        "jd_overall_match": 16.9,
+        "core_skills": 13.0,
         "market_relevance": 15.2,
-        "resume_quality": 64.7,
         "leadership_impact": 12.0,
+        "resume_quality": 64.7,
         "certifications": 0,
         "differentiation": 100
       },
@@ -1092,42 +1076,41 @@
         "technical_skills": {
           "matched": [],
           "missing": [
-            "openai api",
-            "to build cutting-edge ai applications",
-            "pinecone",
-            "implementing rag workflows",
-            "to enhance performance",
-            "storage",
-            "huggingface transformers",
-            "sql",
+            "langgraph",
             "ml frameworks like tensorflow",
-            "faiss",
-            "prophet",
-            "other generative ai tools",
-            ": 1",
-            "deploying ai",
+            "like tensorflow",
+            "weaviate",
+            "lstm",
+            "scikit-learn",
+            "with langgraph",
             "langchain",
+            "openai api",
+            "arima",
+            "deploying ai",
+            "focusing on nlp",
+            "implementing rag workflows",
             "pytorch",
+            "storage",
+            "prophet",
+            "pinecone",
+            "other forecasting techniques",
+            "faiss",
+            "huggingface transformers",
+            "other generative ai tools",
+            "ml models",
+            "techniques",
+            "accuracy",
+            "generative ai applications",
+            "time series",
+            "similar vectordbs for document retrieval",
             "developing",
+            "to enhance performance",
             "models (llms",
             "fine-tuning",
-            "weaviate",
-            "accuracy",
-            "similar vectordbs for document retrieval",
             "generative ai",
-            "scikit-learn",
-            "arima",
+            "to build cutting-edge ai applications",
             "such as javascript",
-            "generative ai applications",
-            "focusing on nlp",
-            "time series",
-            "other forecasting techniques",
-            "techniques",
-            "with langgraph",
-            "lstm",
-            "like tensorflow",
-            "ml models",
-            "langgraph"
+            "sql"
           ],
           "match_details": {}
         },
@@ -1221,16 +1204,16 @@
         "differentiation_analysis": {
           "differentiation_score": 100,
           "unique_elements": [
-            "winner",
-            "dashboards",
-            "developers",
-            "form-filling",
-            "cybersecurity",
-            "dhruv",
-            "resolution",
+            "achieving",
+            "scholarship:50,000",
+            "optimize",
+            "query",
             "trends",
-            "linkedin.com/in/shine-gupta-62b22b264",
-            "assessment"
+            "long-term",
+            "github.com-/cyber-rakshak",
+            "ranked",
+            "solved",
+            "analysis"
           ],
           "specialized_terms": [
             "cybersecurity"
@@ -1251,17 +1234,17 @@
         "Unique skills that differentiate from other candidates"
       ],
       "market_positioning": {
-        "tier": "Limited JD Match",
-        "description": "Entry level for this role - significant gaps in JD requirements",
-        "market_readiness": "Requires Significant Upskilling",
-        "recommendation": "NOT SUITABLE - Poor JD alignment, extensive training required"
+        "tier": "Entry Level",
+        "description": "Candidate requiring substantial development for this role",
+        "market_readiness": "Nearly Ready",
+        "recommendation": "Recommend skill development before consideration"
       },
       "strengths": [
-        "🎯 Good JD education alignment (50.0%)",
-        "Strong ai ml expertise (21.1%)"
+        "Strong ai ml expertise (21.1%)",
+        "Strong action-oriented language"
       ],
       "recommendations": [
-        "Priority skills to acquire: openai api, to build cutting-edge ai applications, pinecone",
+        "Priority skills to acquire: langgraph, ml frameworks like tensorflow, like tensorflow",
         "Consider learning trending blockchain web3 technologies",
         "Highlight leadership roles, team collaboration, or mentoring experience",
         "Add quantifiable metrics and business impact to achievements",
@@ -1284,15 +1267,12 @@
     {
       "candidate_name": "FAANGPath_Simple_Template",
       "file_name": "FAANGPath_Simple_Template.pdf",
-      "overall_score": 22.3,
+      "overall_score": 22.1,
       "score_breakdown": {
-        "jd_technical_match": 2.8,
-        "jd_experience_match": 40.0,
-        "jd_education_match": 50,
-        "jd_overall_match": 18.6,
+        "core_skills": 14.6,
         "market_relevance": 16.5,
-        "resume_quality": 55.7,
         "leadership_impact": 8.0,
+        "resume_quality": 55.7,
         "certifications": 0,
         "differentiation": 100
       },
@@ -1302,46 +1282,46 @@
             "such as javascript"
           ],
           "missing": [
-            "openai api",
-            "to build cutting-edge ai applications",
-            "pinecone",
-            "implementing rag workflows",
-            "to enhance performance",
-            "storage",
-            "huggingface transformers",
-            "sql",
+            "langgraph",
             "ml frameworks like tensorflow",
-            "faiss",
-            "prophet",
-            "other generative ai tools",
-            ": 1",
-            "deploying ai",
+            "like tensorflow",
+            "weaviate",
+            "lstm",
+            "scikit-learn",
+            "with langgraph",
             "langchain",
+            "openai api",
+            "arima",
+            "deploying ai",
+            "focusing on nlp",
+            "implementing rag workflows",
             "pytorch",
+            "storage",
+            "prophet",
+            "pinecone",
+            "other forecasting techniques",
+            "faiss",
+            "huggingface transformers",
+            "other generative ai tools",
+            "ml models",
+            "techniques",
+            "accuracy",
+            "generative ai applications",
+            "time series",
+            "similar vectordbs for document retrieval",
             "developing",
+            "to enhance performance",
             "models (llms",
             "fine-tuning",
-            "weaviate",
-            "accuracy",
-            "similar vectordbs for document retrieval",
             "generative ai",
-            "scikit-learn",
-            "arima",
-            "generative ai applications",
-            "focusing on nlp",
-            "time series",
-            "other forecasting techniques",
-            "techniques",
-            "with langgraph",
-            "lstm",
-            "like tensorflow",
-            "ml models",
-            "langgraph"
+            "to build cutting-edge ai applications",
+            "sql"
           ],
           "match_details": {
             "such as javascript": {
               "type": "partial",
-              "matched_with": "JavaScript"
+              "matched_with": "Java",
+              "priority": "general"
             }
           }
         },
@@ -1435,16 +1415,16 @@
         "differentiation_analysis": {
           "differentiation_score": 100,
           "unique_elements": [
-            "boolean",
-            "hiring",
-            "week",
-            "alongside",
-            "•actively",
-            "viewed",
-            "something",
-            "reactjs",
-            "tool",
-            "reduction"
+            "people",
+            "also",
+            "tiktok",
+            "filling",
+            "media",
+            "notebook",
+            "saved",
+            "involved",
+            "puppetter",
+            "volunteer"
           ],
           "specialized_terms": [
             "nodejs"
@@ -1465,17 +1445,16 @@
         "Unique skills that differentiate from other candidates"
       ],
       "market_positioning": {
-        "tier": "Limited JD Match",
-        "description": "Entry level for this role - significant gaps in JD requirements",
-        "market_readiness": "Requires Significant Upskilling",
-        "recommendation": "NOT SUITABLE - Poor JD alignment, extensive training required"
+        "tier": "Entry Level",
+        "description": "Candidate requiring substantial development for this role",
+        "market_readiness": "Needs Preparation",
+        "recommendation": "Recommend skill development before consideration"
       },
       "strengths": [
-        "🎯 Good JD education alignment (50.0%)",
         "Strong backend modern expertise (40.0%)"
       ],
       "recommendations": [
-        "Priority skills to acquire: openai api, to build cutting-edge ai applications, pinecone",
+        "Priority skills to acquire: langgraph, ml frameworks like tensorflow, like tensorflow",
         "Consider learning trending security technologies",
         "Highlight leadership roles, team collaboration, or mentoring experience",
         "Include more technical details about tools, frameworks, and methodologies",
@@ -1496,68 +1475,66 @@
     {
       "candidate_name": "OldResume",
       "file_name": "OldResume.pdf",
-      "overall_score": 16.9,
+      "overall_score": 17.6,
       "score_breakdown": {
-        "jd_technical_match": 5.6,
-        "jd_experience_match": 0.0,
-        "jd_education_match": 50,
-        "jd_overall_match": 11.1,
+        "core_skills": 9.0,
         "market_relevance": 5.1,
-        "resume_quality": 60.8,
         "leadership_impact": 12.0,
+        "resume_quality": 60.8,
         "certifications": 0,
         "differentiation": 100
       },
       "detailed_analysis": {
         "technical_skills": {
           "matched": [
-            "pytorch",
-            "scikit-learn"
+            "scikit-learn",
+            "pytorch"
           ],
           "missing": [
-            "openai api",
-            "to build cutting-edge ai applications",
-            "pinecone",
-            "implementing rag workflows",
-            "to enhance performance",
-            "storage",
-            "huggingface transformers",
-            "sql",
+            "langgraph",
             "ml frameworks like tensorflow",
-            "faiss",
-            "prophet",
-            "other generative ai tools",
-            ": 1",
-            "deploying ai",
+            "like tensorflow",
+            "weaviate",
+            "lstm",
+            "with langgraph",
             "langchain",
+            "openai api",
+            "arima",
+            "deploying ai",
+            "focusing on nlp",
+            "implementing rag workflows",
+            "storage",
+            "prophet",
+            "pinecone",
+            "other forecasting techniques",
+            "faiss",
+            "huggingface transformers",
+            "other generative ai tools",
+            "ml models",
+            "techniques",
+            "accuracy",
+            "generative ai applications",
+            "time series",
+            "similar vectordbs for document retrieval",
             "developing",
+            "to enhance performance",
             "models (llms",
             "fine-tuning",
-            "weaviate",
-            "accuracy",
-            "similar vectordbs for document retrieval",
             "generative ai",
-            "arima",
+            "to build cutting-edge ai applications",
             "such as javascript",
-            "generative ai applications",
-            "focusing on nlp",
-            "time series",
-            "other forecasting techniques",
-            "techniques",
-            "with langgraph",
-            "lstm",
-            "like tensorflow",
-            "ml models",
-            "langgraph"
+            "sql"
           ],
           "match_details": {
-            "pytorch": {
-              "type": "exact",
-              "matched_with": "PyTorch"
-            },
             "scikit-learn": {
               "type": "exact",
-              "matched_with": "scikit-learn"
+              "matched_with": "scikit-learn",
+              "priority": "general"
+            },
+            "pytorch": {
+              "type": "exact",
+              "matched_with": "PyTorch",
+              "priority": "general"
             }
           }
         },
@@ -1639,16 +1616,16 @@
         "differentiation_analysis": {
           "differentiation_score": 100,
           "unique_elements": [
-            "march",
-            "2024-",
-            "soft",
-            "rooftops",
-            "nullclass",
-            "chatbots",
-            "generation",
+            "visually",
+            "photovoltaics",
+            "optical",
             "leveraged",
-            "10th",
-            "thinking"
+            "digital",
+            "creativity",
+            "potential",
+            "state-of-the-art",
+            "interactions",
+            "september"
           ],
           "specialized_terms": [],
           "uniqueness_ratio": 52.0
@@ -1667,16 +1644,16 @@
         "Unique skills that differentiate from other candidates"
       ],
       "market_positioning": {
-        "tier": "Limited JD Match",
-        "description": "Entry level for this role - significant gaps in JD requirements",
-        "market_readiness": "Requires Significant Upskilling",
-        "recommendation": "NOT SUITABLE - Poor JD alignment, extensive training required"
+        "tier": "Entry Level",
+        "description": "Candidate requiring substantial development for this role",
+        "market_readiness": "Needs Preparation",
+        "recommendation": "Recommend skill development before consideration"
       },
       "strengths": [
-        "🎯 Good JD education alignment (50.0%)"
+        "Strong action-oriented language"
       ],
       "recommendations": [
-        "Priority skills to acquire: openai api, to build cutting-edge ai applications, pinecone",
+        "Priority skills to acquire: langgraph, ml frameworks like tensorflow, like tensorflow",
         "Consider learning trending cloud devops technologies",
         "Highlight leadership roles, team collaboration, or mentoring experience",
         "Add quantifiable metrics and business impact to achievements",
@@ -1705,7 +1682,7 @@
       "fair_40_to_59": 0,
       "poor_below_40": 7
     },
-    "average_score": 24.0,
-    "median_score": 24.9
+    "average_score": 23.9,
+    "median_score": 24.6
   }
 }
